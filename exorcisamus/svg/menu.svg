@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="199.066 69.469 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <path style="fill: rgb(239, 79, 92);" d="M 199.786 269.469 L 199.067 69.828 L 399.065 69.469 C 399.065 69.469 401.591 255.055 199.786 269.469 Z"/>
+  <g transform="matrix(0.737113, 0, 0, 1, 95.095506, 46.856702)" style="visibility: hidden;">
+    <rect style="fill: rgb(216, 216, 216);" x="199.066" y="69.469" width="130.755" height="13.522" rx="2" ry="2"/>
+    <rect style="fill: rgb(216, 216, 216);" x="199.066" y="123.156" width="130.755" height="13.522" rx="2" ry="2"/>
+    <rect style="fill: rgb(216, 216, 216);" x="199.066" y="96.217" width="130.755" height="13.522" rx="2" ry="2"/>
+  </g>
+</svg>

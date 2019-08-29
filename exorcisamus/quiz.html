@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html id="html-scroll">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Tudo para o seu arcebispo exorcista!">
+	  <meta name="keywords" content="adoramus archbishop, arcebispo adoramus, ragnarok, ragnarok online, brazilian ragnarok online, warpportal, warpportal brazil, level up games, magnus exorcismus, adoramus, alpaca, sumo-sacerdote, noviço, luz divina, judex, exorcismo, exorcisamus blog">
+  	<meta name="author" content="Mage Deungaro">
+    <title>Exorcisamus Blog</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Coustard:900|Josefin+Slab|Sacramento" rel="stylesheet">
+    <script src="checar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div id="floating" onclick="openNav()">
+      <span class="fa-stack fa-2x">
+        <i class="menu fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="close-menu">&times;</a>
+      <a class="navA" href="javascript:void(0)" onclick="openSearch()">Pesquisar&emsp;<i class="fas fa-search"></i></a>
+      <a class="navA" href="index.html">Home</a>
+      <a class="navA" href="sobremage.html">Sobre</a>
+      <a class="navA" href="builds.html">Builds</a>
+      <a class="navA" href="quiz.html">Quiz</a>
+      <a class="navA" href="calculadora.html">Calculadora</a>
+    </div>
+
+    <div id="myOverlay" class="overlay">
+      <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+      <div class="overlay-content">
+        <form action="/search" method="get">
+          <input type="text" placeholder="Pesquisar" name="q" required>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="abimg7"></div>
+
+
+    <header>
+      <div class="container">
+      <div id="alpacasvg"><img src="./svg/alpaca.svg" alt="Alpaca"></div>
+      <h1>Exorcisamus !! Blog</h1>
+      </div>
+    </header>
+
+    <section id="questionario ">
+        <div class="container">
+          <h2>Teste os seus conhecimentos ABzísticos!</h2>
+
+          <p id="quizIntro">É alpaca ou lh... digo, já pensou em realmente testar o quanto você sabe sobre ABs exorcistas? Agora você pode! Com este quiz delicadamente elaborado
+          pela Alpaca, você pode testar seus conhecimentos e, de quebra, ainda pode rolar uma surpresa ♥ </p>
+          <p id="quizWarning">Aviso: este quiz não utiliza cookies para salvar respostas, sendo apenas um quiz para roleplay.</p>
+          <input id = "buttonShowQuiz" type = "button" value = "Iniciar quiz" onclick = "quizInit();">
+
+
+          <script src="checar.js"></script>
+          <form id = "quiz" name = "quiz">
+
+          <div>
+            <h3>#1</h3>
+            <p class = "questions">Assinale a alternativa que contém as skills representadas por este ícone:</p>
+            <div><img src="https://1.bp.blogspot.com/-X9sdVso5yYY/XJIfCBDY1oI/AAAAAAAANxY/aL2IP4ivA0ECepqr0dUTJk8p0xfhsc_RgCLcBGAs/s1600/skilllicon.png" alt=""></div>
+            <p class="questions"><b>a.</b> Renovatio, Adoramus e Sopro Divino.</p>
+            <p class="questions"><b>b.</b> Renovatio e Sopro Divino.</p>
+            <p class="questions"><b>c.</b> Adoramus e Sopro Divino.</p>
+            <p class="questions"><b>d.</b> Renovatio e Adoramus.</p>
+            <p class="questions"><b>e.</b> Nenhuma skill.</p>
+            <select id="q1">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+              <option value="d">d</option>
+              <option value="e">e</option>
+            </select>
+            </div>
+          <hr>
+
+          <div>
+            <h3>#2</h3>
+            <p class = "questions">A afirmação "A habilidade Curar não é influenciada por Hard Ataque Mágico" é:</p>
+            <p class="questions"><b>a.</b> Correta, os valores de Curar não mudam baseados em hard atqm.</p>
+            <p class="questions"><b>b.</b> Falsa, todos os tipos de hard atqm influenciam diretamente na cura.</p>
+            <p class="questions"><b>c.</b> Falsa, o único tipo de hard atqm que influencia nos valores de cura é o da arma.</p>
+            <select id="q2">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+            </select>
+          </div>
+          <hr>
+
+          <div>
+            <h3>#3</h3>
+            <p class = "questions">Paçoca é AB exorcista e resolveu testar a técnica exorcista Magnus Exorcismus (ME) com a utilização de Pergaminhos de Amplificação Mística (AM) e Lex Aeterna.</p>
+            <p class="questions">Assinale a alternativa que representa a atuação da AM e da Lex sobre o ME. </p>
+            <p class="questions"><b>a.</b> A Lex aumentará o dano em todas as ondas do ME, enquanto a AM funcionará apenas na primeira.</p>
+            <p class="questions"><b>b.</b> A AM aumentará o dano em todas as ondas do ME, enquanto a Lex funcionará apenas na primeira.</p>
+            <p class="questions"><b>c.</b> A AM aumentará todas as ondas do ME, assim como a Lex.</p>
+            <p class="questions"><b>d.</b> A AM aumentará apenas uma onda a cada vez que for usada, assim como a Lex.</p>
+            <select id="q3">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+              <option value="d">d</option>
+            </select>
+          </div>
+          <hr>
+
+          <div>
+            <h3>#4</h3>
+            <p class = "questions">Sacerzinha_009 vai comprar seu primeiro Vestido Abissal +11 e quer um que seja bem <b>top</b> para aumentar seu dano (mágico) nos monstros. Nos grupos do RagBook (ou seria RagBug?) é recomendado que se compre o +11 Vestido Abissal [Pesar Noturno] para acabar com MvPs ainda mais rápido do que já se mata. Deveria ela realmente comprar?</p>
+            <p class="questions"><small>*Essa questão foi inspirada na sugestão do membro do Cantinho: Fagner Louis</small></p>
+            <p class="questions"><b>a.</b> Sim, pois a carta Pesar Noturno aumenta dano físico e mágico contra os mesmos alvos do Vestido Abissal, aumentando o dano de forma absurda contra estes alvos.</p>
+            <p class="questions"><b>b.</b> Sim, pois a carta Pesar Noturno aumenta dano mágico contra os mesmos alvos do Vestido Abissal, aumentando o dano de forma absurda contra estes alvos.</p>
+            <p class="questions"><b>c.</b> Não, pois a carta Pesar Noturno aumenta dano físico contra os mesmos alvos do Vestido Abissal, tornando a carta inútil para um AB de dano mágico.</p>
+            <select id="q4">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+            </select>
+          </div>
+          <hr>
+
+          <div>
+            <h3>#5</h3>
+            <p class = "questions">Escolha a alternativa correta sobre o modificador de atqm de ME:</p>
+            <p class="questions"><b>a.</b> Independente do level de ME, o modificador é sempre 100% seu atqm.</p>
+            <p class="questions"><b>b.</b> O modificador muda conforme o aumento de level de ME, começando em 100%.</p>
+            <p class="questions"><b>c.</b> O modificador é fixo, sem se basear no level da skill e é de 125%.</p>
+            <select id="q5">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+            </select>
+          </div>
+          <hr>
+
+          <div>
+            <h3>#6</h3>
+            <p class = "questions">Escolha a alternativa incorreta em relação aos alvos de ME:</p>
+            <p class="questions"><b>a.</b> Belzebub, Celine, Ghostring</p>
+            <p class="questions"><b>b.</b> Réquiem de Marfim, Anúbis, Drake</p>
+            <p class="questions"><b>c.</b> Senhor dos Mortos, Tao Gunka, Baphomet</p>
+            <select id="q6">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+            </select>
+          </div>
+          <hr>
+
+          <div>
+            <h3>#7</h3>
+            <p class="questions">"Durante a sagrada peregrinação <br>
+                                 A valquíria precisou de ajuda <br>
+                                 Diante do sucesso da missão <br>
+                                 A Arcebispa fui promovida"
+           </p>
+            <p class = "questions">O excerto acima é referente a uma quest. Assinale a alternativa que representa a ordem correta dos passos referente à quest:</p>
+            <p class="questions"><b>a.</b> Umbala > Raíz da Yggdrasil > Hugel > Santuário de Odin</p>
+            <p class="questions"><b>b.</b> Prontera > Umbala > Hugel > Santuário de Odin</p>
+            <p class="questions"><b>c.</b> Prontera > Umbala > Raíz de Yggdrasil > Umbala > Hugel > Santuário de Odin</p>
+            <select id="q7">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+            </select>
+          </div>
+          <hr>
+
+          <div>
+            <h3>#8</h3>
+            <p class = "questions">Assinale a alternativa correta sobre os NPCs que aparecem para lhe tentar a não virar um sacerdote:</p>
+            <p class="questions"><b>a.</b> Deviruchi > Doppelganger > Senhor das Trevas > Baphomet</p>
+            <p class="questions"><b>b.</b> Diabolik > Doppelganger > Baphomet > Senhor das Trevas</p>
+            <p class="questions"><b>c.</b> Doppelganger > Senhor das Trevas > Baphomet</p>
+            <select id="q8">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+            </select>
+          </div>
+          <hr>
+
+          <div>
+            <h3>#9</h3>
+            <p class = "questions">Sacerzinha_009 possui 50% de redução variável geral. Ela trocou sua Maça do Julgamento por uma do mesmo tipo, porém Fortalecida, obtendo 50% de redução no cast variável de Adoramus e gostaria e está se preparando para testar o cast com Sacramento, skill que proporciona 50% de redução do cast fixo. Assinale a alternativa que representa o resultado do teste:</p>
+            <p class="questions"><b>a.</b> O Adoramus ficará IC (Castado Instantaneamente), pois as duas reduções de varável se somam e Adoramus não possui cast fixo.</p>
+            <p class="questions"><b>b.</b> O Adoramus não ficará IC pois as reduções variáveis não se somam, mas ficará mais rápido por conta da redução específica no cast da skill, e o Sacramento não surtirá efeito.</p>
+            <p class="questions"><b>c.</b> O Adoramus não ficará IC por conta do cast fixo da skill, apesar de ficar com 100% de redução na parte variável.</p>
+            <p class="questions"><b>d.</b> O Adoramus não ficará IC pois as reduções variáveis não se somam, mas ficará mais rápido por conta da redução específica no cast da skill e do Sacramento.</p>
+            <select id="q9">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="b">b</option>
+              <option value="c">c</option>
+              <option value="d">d</option>
+
+            </select>
+          </div>
+          <hr>
+
+          <div>
+            <h3>#10</h3>
+            <p class = "questions">É Alpaca ou Lhama?</p>
+            <p class="questions"><b>a.</b> Lhama, obviamente.</p>
+            <p class="questions"><b>b.</b> É Alpaca, claro.</p>
+            <p class="questions"><b>c.</b> Nada disso, Cabra ou Ovelha.</p>
+            <select id="q10">
+              <option value="empty">--</option>
+              <option value="a">a</option>
+              <option value="a">b</option>
+              <option value="b">c</option>
+            </select>
+          </div>
+          <hr>
+
+          <input id = "button" type = "button" value = "Enviar respostas" onclick = "check();">
+
+          </form>
+
+          <div id = "result">
+          <p id = "nota"></p>
+          <p id = "message"></p>
+          <img src="" alt="" id="alpacaimg">
+        </div>
+        <input type="button" value="Gerar certificado ♥" id="btnGerar" onclick="certDisplay()" />
+
+        </div>
+        <section id="buttonPrint">
+          <div class="container">
+            <script src="pdf.js"></script>
+             <span>&emsp;*Certifique-se de que a impressão será na orientação paisagem/landscape.
+  *<a class="p-a" href="https://drive.google.com/uc?id=1Ab_RwqwJjfNl_GMNhg613QxcKgL6lAN_&export=download">Instruções para impressão em Android</a></span>
+  <input type="button" value="Imprimir certificado ♥" id="btnImprimir" onclick="printCert('certPrint')" />
+          </div>
+        </section>
+        </section>
+        <section id="certPrint">
+          <div class="container">
+              <div class="cont" ><img src="https://svgshare.com/i/BtZ.svg" class="certificado"/>
+                <p class="nome" contenteditable="true">
+                  Edite seu nome aqui
+                </p>
+              </div>
+          </div>
+        </section>
+
+
+    <div onclick="topFunction()" id="topoBtn" title="Vá para o topo">
+	    <span class="fa-stack fa-2x">
+        <i class="menu fas fa-heart fa-stack-2x"></i>
+    	  <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
+	    </span>
+    </div>
+
+    <footer>
+      <small>&copy; Magê Deungaro 2019<small>
+      <div class="social-links">
+        <a href="https://www.facebook.com/groups/1672243703028215/"><i class="fab fa-facebook fa-2x"></i></a><a href="http://www.youtube.com/c/Exorcisamus"><i class="fab fa-youtube fa-2x"></i></a>
+      </div>
+    </footer>
+
+    <script src="top.js"></script>
+    <script src="sidenav.js"></script>
+    <script src="cookiesQuiz.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
