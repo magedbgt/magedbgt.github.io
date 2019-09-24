@@ -62,7 +62,7 @@
       <div class="container">
 
         <h2>Calculadora de Redução de Dano - HMDEF</h2>
-        <div class="flexRow">
+        <div class="flexRow flexCenter">
 
           <div class="flexColumn calcMargin">
             <p>Penetração Mágica</p>
@@ -74,8 +74,10 @@
             <input type="number" id="mdefMon" placeholder="0">
           </div>
         </div>
-        <div class="flexRow centerTxt_">
-          <div><button onclick="reducCalc()" type="button" id="buttonCalc">Calcular</button></div>
+        <div class="flexRow flexCenter">
+          <button onclick="reducCalc()" type="button" id="buttonCalc">Calcular</button>
+        </div>
+        <div class="flexRow flexCenter">
           <div class="centerTxt"><small>HMDEF Restante</small><p id="result0">0</p></div>
           <div class="centerTxt"><small>Redução Calculada</small><p id="result1">0%</p></div>
           <div class="centerTxt"><small>Dano Final</small><p id="result2">100%</p></div>

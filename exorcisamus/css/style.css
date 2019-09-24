@@ -54,6 +54,10 @@ select#abJobPt{
   margin: 0 auto;
 }
 
+.flexRow.flexCenter{
+  justify-content: center;
+}
+
 .trans{
   display: inline-flex;
   width: 50%;
