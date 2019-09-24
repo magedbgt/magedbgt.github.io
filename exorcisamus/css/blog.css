@@ -712,6 +712,11 @@ html {
 
   /*=======================*/
   /*calculadora*/
+  .canvasP{
+    position: relative;
+    width: 100%;
+  }
+
   #buttonCalc{
     margin: 2rem 0;
     border: none;
