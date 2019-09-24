@@ -166,6 +166,10 @@ html {
     justify-content: center;
   }
 
+  .flexRow.flexEven{
+    justify-content: space-evenly;
+  }
+
   .flexColumn{
     flex-direction: column;
     justify-content: space-between;

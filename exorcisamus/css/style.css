@@ -58,6 +58,10 @@ select#abJobPt{
   justify-content: center;
 }
 
+.flexRow.flexEven{
+  justify-content: space-evenly;
+}
+
 .trans{
   display: inline-flex;
   width: 50%;
