@@ -14,6 +14,7 @@
   background: #f9f9f9;
 }
 
+
 #skillCalculadora .flexColumn{
   width: 100%;
   justify-content: flex-start;
@@ -902,6 +903,15 @@ input[type=button]:hover{
 
 /*=======================*/
 
+/*calc hmdef*/
+.canvasP{
+  position: relative;
+  width: 100%;
+  height: 75vh;
+}
+
+/*=======================*/
+
 
 /*=======================*/
 
@@ -928,6 +938,7 @@ input[type=button]:hover{
     p,li{
       font-size: 1.3rem!important;
     }
+
 
 }
 
@@ -1121,6 +1132,10 @@ input[type=button]:hover{
   input[type=checkbox]{
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  .canvasP{
+    height: 55vh;
   }
 
   .animated {

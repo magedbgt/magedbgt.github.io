@@ -43,7 +43,7 @@ let myChart = new Chart(ctx, {
       },
       //responsivo ou não
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       //labels
         scales: {
           //eixo y
