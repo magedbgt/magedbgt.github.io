@@ -1,0 +1,49 @@
+:root{
+  --blueberry: #504176;
+  --strawberry: #fabbc5;
+  --banana: #ecc743;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+    *:focus{
+      outline: none;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #9c9c9c;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #737373;
+    }
+
+    footer, header{
+      clear: both;
+    }
+
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: var(--strawberry);
+    }

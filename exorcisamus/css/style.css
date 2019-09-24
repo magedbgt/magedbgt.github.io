@@ -1105,7 +1105,7 @@ input[type=button]:hover{
     border-radius: 10px;
   }
 
-  p#result1, p#result2, p#result3{
+  p#result0, p#result1, p#result2, p#result3{
     margin: 0 0 2rem;
     font-size: 2.5rem!important;
   }
