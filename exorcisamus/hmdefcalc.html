@@ -77,11 +77,13 @@
         <div class="flexRow flexCenter">
           <button onclick="reducCalc()" type="button" id="buttonCalc">Calcular</button>
         </div>
-        <div class="flexRow flexCenter flexEven">
+        <div class="flexRow flexEven">
           <div class="centerTxt"><small>HMDEF Restante</small><p id="result0">0</p></div>
           <div class="centerTxt"><small>Redução Calculada</small><p id="result1">0%</p></div>
           <div class="centerTxt"><small>Dano Final</small><p id="result2">100%</p></div>
         </div>
+
+        <canvas id="line-chart"></canvas>
       </div>
     </section>
 
@@ -103,6 +105,8 @@
     <script src="calc3.js"></script>
     <script src="top.js"></script>
     <script src="sidenav.js"></script>
+    <script src="Chart.bundle.min.js"></script>
+    <script src="canvas.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
       new WOW().init();
