@@ -1260,6 +1260,18 @@ html {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/fex.jpg);
     }
 
+    div.abimg5{
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/calc.png);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/calc.png);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/calc.png);
+    }
+
+    div.abimg6{
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/hmdef.png);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/hmdef.png);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/hmdef.png);
+    }
+
     #hMob{
       display: block;
       color: black;
