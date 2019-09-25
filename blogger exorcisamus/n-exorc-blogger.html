@@ -207,9 +207,37 @@
       <title>Builds &#8226; Exorcisamus Blog</title>
       <meta content='Construções para seu Arcebispo' name='description'/>
       <style>
-       #navguia, footer, div.abimg, #posts, #hMob{
+       #navguia, footer, div.abimg,  #hMob{
          display: none!important;
        }
+
+      #posts, #posts > .container, .main.section, .widget.Blog, #blog-pager{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+
+       .buildsPageCond{
+         display: block;
+       }
+
+      </style>
+    </b:if>
+
+    <!-- calculadoras -->
+    <b:if cond='data:blog.pageId == 1978698860712621396'>
+      <title>Calculadoras &#8226; Exorcisamus Blog</title>
+      <meta content='Calculadoras à sua disposição' name='description'/>
+      <style>
+       #navguia, footer, div.abimg,  #hMob{
+         display: none!important;
+       }
+
+      #posts, #posts > .container, .main.section, .widget.Blog, #blog-pager{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
 
        .buildsPageCond{
          display: block;
@@ -1306,55 +1334,6 @@
 
       </div>
     </section>
-
-    <!-- builds page -->
-
-    <div class='buildsPageCond'>
-      <div class='abimg2 cont-flex white'>
-        <div class='container cont-flex'>
-          <h2 class='build-title'>
-            <a class='buildA' href='/p/adoramus.html'>Adoramus</a>
-          </h2>
-          <p>
-            Arcebispo que utiliza um potente canhão de luz sagrado (single target) para limpar até os mais leves pecadores.
-          </p>
-        </div>
-      </div>
-
-      <div class='abimg3 cont-flex white'>
-        <div class='container cont-flex'>
-          <h2 class='build-title'>
-            <a class='buildA' href='/p/magnusexorcismus.html'>Magnus Exorcismus</a>
-          </h2>
-          <p>
-            Arcebispo que se utiliza de um ritual (AoE-ground) para exorcisar demônios e malditos.
-          </p>
-        </div>
-      </div>
-
-      <div class='abimg4 cont-flex white'>
-        <div class='container cont-flex'>
-          <h2 class='build-title'>
-            <a class='buildA' href='/p/f-ex.html'>Full Exorcista</a>
-          </h2>
-          <p>
-            Arcebispo especialista que se utiliza de todas as formas de exorcismo (single target, AoE-ground e AoE-splash).
-          </p>
-        </div>
-      </div>
-
-      <div class='abimg1 cont-flex white last-img'>
-        <div class='container cont-flex'>
-          <h2 class='build-title'>
-            <a class='buildA' href='/p/luzdivina.html'>Luz Divina</a>
-          </h2>
-          <p>
-            Arcebispo que se utiliza de uma luz sagrada (single target) para corrigir pequenos erros de pecadores.
-          </p>
-        </div>
-        <small class='build-small'>&#169; Magê Deungaro 2019</small>
-      </div>
-    </div>
 
     <!-- footer and top button -->
     <div id='topoBtn' onclick='topFunction()' title='Vá para o topo'>

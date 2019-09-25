@@ -5,17 +5,17 @@
 }
 html {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit;
   }
 
   *, *:hover, *:disabled, *:focus{
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
   }
 
@@ -36,8 +36,6 @@ html {
 
   ::-webkit-scrollbar-thumb, .sidenav, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover,.blog-pager-older-link:hover, .blog-pager-newer-link:hover, .p-a:hover, .ubiA:hover{
     background: rgb(239,79,92);
-    background: -moz-linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%);
-    background: -webkit-linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%);
     background: linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef4f5c",endColorstr="#f27f59",GradientType=1);
   }
@@ -85,7 +83,9 @@ html {
     position: absolute;
     top: -10px;
     left: 0;
-    transform: skewY(2deg);
+    -webkit-transform: skewY(2deg);
+        -ms-transform: skewY(2deg);
+            transform: skewY(2deg);
   }
 
   footer{
@@ -154,25 +154,41 @@ html {
   .flexRow, .flexColumn, #mySidenav form,
   .sidenav, .navguia, #nav-home .contido ul,section#joinus div,
   .artistas,div.contido, section.equips div.slideInLeft, section.equips div.slideInRight, .equips-ul, .cont-flex, #result,h2.date-header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .flexRow{
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 0 0 3rem;
   }
 
   .flexRow.flexCenter{
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .flexRow.flexEven{
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 
   .flexColumn{
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .container{
@@ -224,7 +240,7 @@ html {
 
   /*backgrounds*/
 
-  div.abimg, div.abimg1,div.abimg2,div.abimg3,div.abimg4{
+  div.abimg, div.abimg1,div.abimg2,div.abimg3,div.abimg4, div.abimg5, div.abimg6{
     width: 100%;
     height: 100vh;
     background-position: top;
@@ -234,7 +250,7 @@ html {
 
   }
 
-  div.abimg1,div.abimg3,div.abimg4{
+  div.abimg1,div.abimg3,div.abimg4, div.abimg5, div.abimg6{
     -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
     -o-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
@@ -242,8 +258,9 @@ html {
   }
 
   div.abimg{
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/Assinatura.png);
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/Assinatura.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/Assinatura.png);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/Assinatura.png);
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/Assinatura.png);
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
     -o-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
@@ -251,27 +268,38 @@ html {
   }
 
   div.abimg1{
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/ab1.jpg);
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/ab1.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/ab1.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/ab1.jpg);
   }
 
   div.abimg2{
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/photo%20-%20Copy.png);
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/photo%20-%20Copy.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/photo%20-%20Copy.png);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/photo%20-%20Copy.png);
   }
 
   div.abimg3{
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mage.jpg);
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mage.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mage.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mage.jpg);
   }
 
   div.abimg4{
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/chocotan_by_Hana.jpg);
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/chocotan_by_Hana.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/chocotan_by_Hana.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/chocotan_by_Hana.jpg);
+  }
+  div.abimg5{
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/roses_by_Hanano.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/roses_by_Hanano.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/roses_by_Hanano.jpg);
+  }
+
+  div.abimg6{
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://raw.githubusercontent.com/magedbgt/magedbgt.github.io/master/exorcisamus/img/roses_by_mage.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://raw.githubusercontent.com/magedbgt/magedbgt.github.io/master/exorcisamus/img/roses_by_mage.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://raw.githubusercontent.com/magedbgt/magedbgt.github.io/master/exorcisamus/img/roses_by_mage.png);
   }
 
   /*=======================*/
@@ -307,8 +335,13 @@ html {
 
   #mySidenav form{
     width: 100%;
-    flex-direction: row-reverse;
-    justify-content: inherit;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+            justify-content: inherit;
     margin: 0;
   }
 
@@ -337,7 +370,8 @@ html {
 
   .search-link{
     cursor: pointer;
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 
   .sidenav {
@@ -351,9 +385,16 @@ html {
     padding-top: 0;
     text-align: center;
     text-transform: uppercase;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .sidenav.open-nav{
@@ -369,10 +410,46 @@ html {
     display: block;
   }
 
+   .sidenav a, #mySidenav input, #mySidenav input::-webkit-input-placeholder{
+     color: var(--pale-pink);
+     text-align: center;
+   }
+
+   .sidenav a, #mySidenav input, #mySidenav input::-moz-placeholder{
+     color: var(--pale-pink);
+     text-align: center;
+   }
+
+   .sidenav a, #mySidenav input, #mySidenav input:-ms-input-placeholder{
+     color: var(--pale-pink);
+     text-align: center;
+   }
+
+   .sidenav a, #mySidenav input, #mySidenav input::-ms-input-placeholder{
+     color: var(--pale-pink);
+     text-align: center;
+   }
+
    .sidenav a, #mySidenav input, #mySidenav input::placeholder{
      color: var(--pale-pink);
      text-align: center;
    }
+
+    #mySidenav input::-webkit-input-placeholder{
+      opacity: .5;
+    }
+
+    #mySidenav input::-moz-placeholder{
+      opacity: .5;
+    }
+
+    #mySidenav input:-ms-input-placeholder{
+      opacity: .5;
+    }
+
+    #mySidenav input::-ms-input-placeholder{
+      opacity: .5;
+    }
 
     #mySidenav input::placeholder{
       opacity: .5;
@@ -388,9 +465,16 @@ html {
   }
 
   .display{
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
     display: flex!important;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-transform: none;
     border-top: 1px #fff solid;
     border-bottom: 1px #fff solid;
@@ -419,10 +503,13 @@ html {
   }
 
   .navguia{
+    position: -webkit-sticky;
     position: sticky;
     z-index: 5;
     top: 0;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 
   #nav-home, #navguia{
@@ -439,7 +526,10 @@ html {
   }
 
   #nav-home .contido ul{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     text-align: center;
   }
@@ -449,7 +539,9 @@ html {
   }
 
   .navguia .contido{
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   ul.nav-build{
@@ -469,7 +561,10 @@ html {
 
   .nav-build a:hover li{
     background: white;
-    box-shadow: 5px 5px 5px #d0d0d0;
+    -webkit-box-shadow: 5px 5px 5px #d0d0d0;
+            box-shadow: 5px 5px 5px #d0d0d0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
   }
 
@@ -507,9 +602,16 @@ html {
   }
 
   section#joinus div{
-    flex-direction: row;
-    align-items: center;
-    align-self: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin: 3rem 0;
   }
 
@@ -518,9 +620,16 @@ html {
     margin: 0;
     padding: .5rem 1rem;
     display: inherit;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   section#joinus p{
@@ -528,7 +637,10 @@ html {
   }
 
   .artistas{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     font-size: 1.3rem;
   }
@@ -548,8 +660,13 @@ html {
   }
 
   div.contido{
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .skill-tree1, .atts1{
@@ -575,9 +692,16 @@ html {
   }
 
   section.equips div.slideInLeft, section.equips div.slideInRight{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   /*equipment lists*/
   .equips-li-t{
@@ -617,10 +741,19 @@ html {
   }
 
   .equips-ul{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 
 
@@ -641,9 +774,16 @@ html {
   }
 
   .cont-flex{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   a.buildA {
@@ -688,23 +828,38 @@ html {
   }
 
   #result{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .cont{
     position:relative;
+     display:-webkit-box;
+     display:-ms-flexbox;
      display:flex;
-     flex-direction: column;
-     justify-content:center;
-     align-items: center;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+             flex-direction: column;
+     -webkit-box-pack:center;
+         -ms-flex-pack:center;
+             justify-content:center;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
    }
 
    .nome{
      position:absolute;
      top:47%;
+     display:-webkit-box;
+     display:-ms-flexbox;
      display:flex;
      text-align:center;
-     align-self: center;
+     -ms-flex-item-align: center;
+         align-self: center;
      font-weight:600;
      font-size: 4rem;
    }
@@ -852,7 +1007,7 @@ html {
     .canvasP{
       height: 55vh;
     }
-    
+
     img{
       width: 100%;
     }
@@ -860,8 +1015,7 @@ html {
     a.ubiA, input[type=button], #blog-pager-newer-link, #blog-pager-older-link,
     a.home-link, .blog-pager-newer-link, .blog-pager-older-link{
       background: rgb(239,79,92)!important;
-      background: -moz-linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
-      background: -webkit-linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
+      background: -o-linear-gradient(322deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
       background: linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef4f5c",endColorstr="#f27f59",GradientType=1);
     }
@@ -932,7 +1086,10 @@ html {
     }
 
     div.contido, section#joinus div.container, .flexRow{
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
     }
 
     a.ubiA{
@@ -940,8 +1097,13 @@ html {
     }
 
     .focus, .blog-pager, .flex-join{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column!important;
+      -webkit-box-orient: vertical!important;
+      -webkit-box-direction: normal!important;
+          -ms-flex-direction: column!important;
+              flex-direction: column!important;
     }
 
     .skill-tree1, .atts1{
@@ -951,8 +1113,13 @@ html {
 
 
     #nav-home{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       width: 100%;
       text-align: center;
     }
@@ -979,7 +1146,9 @@ html {
     }
 
     .equips-ul{
-      align-items: stretch;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
     }
 
     .cont-flex a.buildA{
@@ -1030,32 +1199,29 @@ html {
     }
 
     #nav-home{
+      display: -webkit-box!important;
+      display: -ms-flexbox!important;
       display: flex!important;
       position: static!important;
     }
 
     #nav-home ul.nav-build{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
 
     .animated {
       /*CSS transitions*/
       -o-transition-property: none !important;
-      -moz-transition-property: none !important;
-      -ms-transition-property: none !important;
       -webkit-transition-property: none !important;
       transition-property: none !important;
       /*CSS transforms*/
-      -o-transform: none !important;
-      -moz-transform: none !important;
       -ms-transform: none !important;
       -webkit-transform: none !important;
       transform: none !important;
       /*CSS animations*/
       -webkit-animation: none !important;
-      -moz-animation: none !important;
-      -o-animation: none !important;
-      -ms-animation: none !important;
       animation: none !important;
     }
 
@@ -1072,26 +1238,26 @@ html {
     }
 
     div.abimg1{
-      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/luz.jpg);
       background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/luz.jpg);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/luz.jpg);
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/luz.jpg);
     }
 
     div.abimg2{
-      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/adoramus.jpg);
       background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/adoramus.jpg);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/adoramus.jpg);
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/adoramus.jpg);
     }
 
     div.abimg3{
-      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/me.jpg);
       background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/me.jpg);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/me.jpg);
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/me.jpg);
     }
 
     div.abimg4{
-      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/fex.jpg);
       background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/fex.jpg);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/fex.jpg);
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/fex.jpg);
     }
 
@@ -1142,8 +1308,12 @@ html {
     }
 
     .jump-link{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       text-align: center;
       padding: auto 3rem;
 
