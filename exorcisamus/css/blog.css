@@ -242,7 +242,7 @@ html {
 
   div.abimg, div.abimg1,div.abimg2,div.abimg3,div.abimg4, div.abimg5, div.abimg6{
     width: 100%;
-    height: 100vh;
+    height: 101vh;
     background-position: top;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -250,7 +250,7 @@ html {
 
   }
 
-  div.abimg1,div.abimg3,div.abimg4, div.abimg5, div.abimg6{
+  div.abimg1,div.abimg3,div.abimg4, div.abimg6{
     -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
     -o-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
