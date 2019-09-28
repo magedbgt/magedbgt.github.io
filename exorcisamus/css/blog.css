@@ -1006,7 +1006,7 @@ html {
     }
   }
 
-  @media only screen and (max-width: 810px) {
+  @media only screen and (max-width: 835px) {
     .canvasP{
       height: 55vh;
     }
@@ -1016,7 +1016,7 @@ html {
     }
 
     a.ubiA, input[type=button], #blog-pager-newer-link, #blog-pager-older-link,
-    a.home-link, .blog-pager-newer-link, .blog-pager-older-link{
+    a.home-link, .blog-pager-newer-link{
       background: rgb(239,79,92)!important;
       background: -o-linear-gradient(322deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
       background: linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
@@ -1355,6 +1355,352 @@ html {
     .nome{
       font-size: 3rem;
     }
+  }
+
+  /* ipad 1024 */
+  @media only screen and (min-width: 1024px) and (orientation: portrait) {
+    .canvasP{
+      height: 55vh;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    a.ubiA, input[type=button], #blog-pager-newer-link, #blog-pager-older-link,
+    a.home-link, .blog-pager-newer-link{
+      background: rgb(239,79,92)!important;
+      background: -o-linear-gradient(322deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
+      background: linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef4f5c",endColorstr="#f27f59",GradientType=1);
+    }
+
+    #posts{
+      width: 100%;
+    }
+
+    #posts::before{
+      content:none;
+    }
+
+    #nav-home, #navguia{
+      padding-top: 0;
+      float: none;
+    }
+
+    #topoBtn{
+      right: -15px;
+    }
+
+    header{
+      padding-top: 10%;
+    }
+
+    header h1{
+      font-size: 2.8rem;
+      padding-bottom: 5px;
+    }
+
+    #posts{
+      padding-top: 0;
+      width: 100%;
+      padding-left: 0;
+    }
+
+    h2.page-title, p{
+    font-size: 1.43rem;
+    }
+
+    li{
+      font-size: 1.1rem;
+    }
+
+    ul, h3, .atts-p{
+      font-size: 1.4rem;
+    }
+
+    #calculadora small, .entry-content{
+      font-size: 1.3rem!important;
+    }
+
+    .sidenav a.navA{
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    #floating .fa-2x, .quote{
+      font-size: 4rem!important;
+    }
+
+    #build-page-title h2, h2.build-title{
+      font-size: 3rem;
+    }
+
+    .nome{
+      font-size: 2.5rem;
+    }
+
+    div.contido, section#joinus div.container, .flexRow{
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    a.ubiA{
+      color: #fff;
+    }
+
+    .focus, .blog-pager, .flex-join{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical!important;
+      -webkit-box-direction: normal!important;
+          -ms-flex-direction: column!important;
+              flex-direction: column!important;
+    }
+
+    .skill-tree1, .atts1{
+      width: 100%;
+      text-align: center;
+    }
+
+
+    #nav-home{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+
+    section#joinus div.slideInLeft, section#joinus div.slideInRight, .equips1{
+      width: 100%;
+    }
+
+    section#joinus p, .centerTxt_, #quiz h3, #questionario, .focus{
+      text-align: center;
+    }
+
+    .skill-tree1 ul{
+      list-style: none;
+      padding: 0;
+    }
+
+    #floating{
+      padding: .5rem 0 0;
+    }
+
+    nav.navguia, .abimg{
+      display: none!important;
+    }
+
+    .equips-ul{
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+    }
+
+    .cont-flex a.buildA{
+      border: none;
+      font-weight: lighter;
+    }
+
+    #build-page-title{
+      height: 100vh;
+      padding-bottom: 20rem;
+    }
+
+    section#joinus{
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    input[type=button]{
+      width: 100%;
+      color: #fff;
+      padding: 15px 0;
+      text-transform: uppercase;
+      margin: 15px 0;
+    }
+
+    select{
+      width: 100%;
+      padding: 14px;
+    }
+
+    input:disabled, #calculadora input[type=number]{
+      padding: 14px;
+    }
+
+    #calculadora button{
+      padding: 14px;
+      width: 100%;
+    }
+
+    p#result0, p#result1, p#result2, p#result3{
+      margin: 0 0 2rem;
+      font-size: 2.5rem!important;
+    }
+
+    input[type=checkbox]{
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    #nav-home{
+      display: -webkit-box!important;
+      display: -ms-flexbox!important;
+      display: flex!important;
+      position: static!important;
+    }
+
+    #nav-home ul.nav-build{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .animated {
+      /*CSS transitions*/
+      -o-transition-property: none !important;
+      -webkit-transition-property: none !important;
+      transition-property: none !important;
+      /*CSS transforms*/
+      -ms-transform: none !important;
+      -webkit-transform: none !important;
+      transform: none !important;
+      /*CSS animations*/
+      -webkit-animation: none !important;
+      animation: none !important;
+    }
+
+    div.abimg, div.abimg1,div.abimg2,div.abimg3,div.abimg4{
+      background-attachment: scroll;
+      background-size: 177vh;
+    }
+    div.abimg2,div.abimg3{
+      background-position: top;
+    }
+
+    div.abimg1,div.abimg4{
+      background-position: center;
+    }
+
+    div.abimg1{
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/luz.jpg);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/luz.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/luz.jpg);
+    }
+
+    div.abimg2{
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/adoramus.jpg);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/adoramus.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/adoramus.jpg);
+    }
+
+    div.abimg3{
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/me.jpg);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/me.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/me.jpg);
+    }
+
+    div.abimg4{
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/fex.jpg);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/fex.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/fex.jpg);
+    }
+
+    div.abimg5{
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/calc.png);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/calc.png);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/calc.png);
+    }
+
+    div.abimg6{
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/hmdef.png);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/mob/hmdef.png);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/mob/hmdef.png);
+    }
+
+    #hMob{
+      display: block;
+      color: black;
+    }
+
+    #hMob h1{
+      border-bottom: 1px black solid;
+    }
+
+    #hMob h2 {
+      line-height: 1;
+      padding-top: 20px;
+      display: none;
+    }
+
+    footer{
+      background-size: cover;
+      background-position: center;
+    }
+
+    /*blogger media query*/
+
+    #blog-pager-newer-link,
+    #blog-pager-older-link, a.home-link{
+      color: #fff!important;
+      width: 100%!important;
+    }
+
+    #blog-pager-newer-link,
+    #blog-pager-older-link{
+      padding: 6px 0;
+      margin: 1rem 0 0;
+    }
+
+    .jump-link a{
+      margin-top: 1.1rem;
+      width: 100%;
+      background: #fff!important;
+      border: 1px solid var(--pink);
+      color: var(--pink);
+    }
+
+    a.home-link{
+      margin: 1rem 0;
+    }
+
+    .jump-link{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: center;
+      padding: auto 3rem;
+
+    }
+    .blog-pager-newer-link, .blog-pager-older-link{
+      color: #fff!important;
+      padding: 3px 15px;
+    }
+
+    h3.post-title{
+      margin-top: 2rem;
+    }
+    .post-title a, #hMob h2, h3.post-title{
+      font-size: 2rem;
+    }
+
+    #hmob h2{
+      margin-bottom: 1rem;
+    }
+    /*====================*/
   }
   /*=======================*/
 
