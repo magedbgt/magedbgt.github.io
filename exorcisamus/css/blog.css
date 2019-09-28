@@ -1128,6 +1128,15 @@ html {
       position: static;
     }
 
+    #nav-home .contido ul{
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .nav-build li{
+      width: auto;
+    }
+
     section#joinus div.slideInLeft, section#joinus div.slideInRight, .equips1{
       width: 100%;
     }
