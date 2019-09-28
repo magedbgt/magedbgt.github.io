@@ -1279,7 +1279,9 @@ html {
     #hMob h2 {
       line-height: 1;
       padding-top: 20px;
-      display: none;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin: 3.5rem 0 .5rem;
     }
 
     footer{
@@ -1340,9 +1342,7 @@ html {
       font-size: 2rem;
     }
 
-    #hmob h2{
-      margin-bottom: 1rem;
-    }
+
     /*====================*/
   }
 
@@ -1631,12 +1631,8 @@ html {
     #hMob h2 {
       line-height: 1;
       padding-top: 20px;
-      display: none;
-    }
-
-    footer{
-      background-size: cover;
-      background-position: center;
+      margin: 4rem 0 1rem;
+      font-size: 3rem;
     }
 
     /*blogger media query*/
@@ -1684,7 +1680,7 @@ html {
     h3.post-title{
       margin-top: 2rem;
     }
-    .post-title a, #hMob h2, h3.post-title{
+    .post-title a, h3.post-title{
       font-size: 2rem;
     }
 
