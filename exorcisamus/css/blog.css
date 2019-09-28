@@ -1125,6 +1125,7 @@ html {
               flex-direction: column;
       width: 100%;
       text-align: center;
+      position: static;
     }
 
     section#joinus div.slideInLeft, section#joinus div.slideInRight, .equips1{
@@ -1199,13 +1200,6 @@ html {
     input[type=checkbox]{
       width: 1.5rem;
       height: 1.5rem;
-    }
-
-    #nav-home{
-      display: -webkit-box!important;
-      display: -ms-flexbox!important;
-      display: flex!important;
-      position: static!important;
     }
 
     #nav-home ul.nav-build{
@@ -1308,6 +1302,10 @@ html {
     #blog-pager-older-link{
       padding: 6px 0;
       margin: 1rem 0 0;
+    }
+
+    .blog-pager-older-link{
+      background: transparent;
     }
 
     .jump-link a{
@@ -1580,9 +1578,8 @@ html {
       animation: none !important;
     }
 
-    div.abimg, div.abimg1,div.abimg2,div.abimg3,div.abimg4{
+    div.abimg, div.abimg1,div.abimg2,div.abimg3,div.abimg4, div.abimg5, div.abimg6{
       background-attachment: scroll;
-      background-size: 177vh;
     }
     div.abimg2,div.abimg3{
       background-position: top;
