@@ -1145,7 +1145,7 @@ html {
       padding: .5rem 0 0;
     }
 
-    nav.navguia, .abimg{
+    nav#navguia, .abimg{
       display: none!important;
     }
 
