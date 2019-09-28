@@ -8,6 +8,8 @@ function rnd(array){
 window.addEventListener("load", randomArt, false);
 function randomArt(){
   let homeHeader = document.getElementById('homeHeader'),
+  postHeader = document.getElementById('postHeader'),
+   innerHTML,
   artes = [
     'https://magedbgt.github.io/exorcisamus/img/Assinatura.png',
     'https://magedbgt.github.io/exorcisamus/img/PRA-MAGE.png',
@@ -23,6 +25,9 @@ function randomArt(){
   arte = rnd(artes);
 
   //innerHTML
-  homeHeader.innerHTML =
+  innerHTML =
   'div.abimg{background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('+arte+')!important;background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url('+arte+')!important;background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('+arte+')!important;}';
+
+homeHeader.innerHTML = innerHTML;
+  postHeader.innerHTML = innerHTML;
 }
