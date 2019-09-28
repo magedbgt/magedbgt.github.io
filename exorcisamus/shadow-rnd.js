@@ -13,7 +13,6 @@ function randomArt(){
     'https://magedbgt.github.io/exorcisamus/img/Assinatura.png',
     'https://magedbgt.github.io/exorcisamus/img/PRA-MAGE.png',
     'https://magedbgt.github.io/exorcisamus/img/ab1.jpg',
-    'https://magedbgt.github.io/exorcisamus/img/hode.png',
     'https://magedbgt.github.io/exorcisamus/img/mage.jpg',
     'https://magedbgt.github.io/exorcisamus/img/photo%20-%20Copy.png',
     'https://magedbgt.github.io/exorcisamus/img/roses_by_mage.png',
