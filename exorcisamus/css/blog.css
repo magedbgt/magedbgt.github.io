@@ -1352,6 +1352,14 @@ html {
     }
   }
 
+  /* ipad 800 */
+  @media only screen and (min-device-width: 834px) and (orientation: portrait) {
+    footer {
+    background-size: initial;
+    background-position: center;
+    }
+  }
+
   /* ipad 1024 */
   @media only screen and (min-width: 1024px) and (orientation: portrait) {
     .canvasP{
