@@ -1341,6 +1341,13 @@ html {
     h3.post-title{
       margin-top: 2rem;
     }
+    .post-title a, #hMob h2, h3.post-title{
+      font-size: 2rem;
+    }
+
+    #hmob h2{
+      margin-bottom: 1rem;
+    }
     /*====================*/
   }
 
