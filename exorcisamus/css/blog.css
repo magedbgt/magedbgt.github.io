@@ -101,6 +101,10 @@ html {
     width: auto;
   }
 
+  .postimg{
+    width: 100%;
+  }
+
   #alpacaimg, #alpacasvg img, .auto-img{
     width: auto;
   }
