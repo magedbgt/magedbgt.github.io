@@ -1219,9 +1219,8 @@ html {
       animation: none !important;
     }
 
-    div.abimg, div.abimg1,div.abimg2,div.abimg3,div.abimg4{
+    div.abimg, div.abimg1,div.abimg2,div.abimg3,div.abimg4, div.abimg5, div.abimg6{
       background-attachment: scroll;
-      background-size: 177vh;
     }
     div.abimg2,div.abimg3{
       background-position: top;
