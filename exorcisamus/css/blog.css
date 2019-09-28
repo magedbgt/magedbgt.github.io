@@ -1131,6 +1131,7 @@ html {
     #nav-home .contido ul{
       flex-direction: row;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     .nav-build li{
