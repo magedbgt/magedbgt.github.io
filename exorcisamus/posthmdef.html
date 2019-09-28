@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html id="html-scroll">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Tudo para o seu arcebispo exorcista!">
+	  <meta name="keywords" content="adoramus archbishop, arcebispo adoramus, ragnarok, ragnarok online, brazilian ragnarok online, warpportal, warpportal brazil, level up games, magnus exorcismus, adoramus, alpaca, sumo-sacerdote, noviço, luz divina, judex, exorcismo, exorcisamus blog">
+  	<meta name="author" content="Mage Deungaro">
+    <title>Exorcisamus Blog</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Coustard:900|Josefin+Slab|Sacramento" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="floating" onclick="openNav()">
+      <span class="fa-stack fa-2x">
+        <i class="menu fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-bars fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="close-menu">&times;</a>
+      <a class="navA" href="javascript:void(0)" onclick="openSearch()">Pesquisar&emsp;<i class="fas fa-search"></i></a>
+      <a class="navA" href="index.html">Home</a>
+      <a class="navA" href="sobremage.html">Sobre</a>
+      <a class="navA" href="builds.html">Builds</a>
+      <a class="navA" href="quiz.html">Quiz</a>
+      <a class="navA" href="calculadora.html">Calculadora</a>
+    </div>
+
+    <div id="myOverlay" class="overlay">
+      <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+      <div class="overlay-content">
+        <form action="/search" method="get">
+          <input type="text" placeholder="Pesquisar" name="q" required>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="abimg4"></div>
+
+    <header>
+      <div class="container">
+      <div id="alpacasvg"><img src="./svg/alpaca.svg" alt="Alpaca"></div>
+      <h1>Exorcisamus !! Blog</h1>
+      </div>
+    </header>
+
+
+    <section>
+      <div class="container">
+        <p>Bora conversar sobre a mdef? Em especial a discussão sobre valk drop x h motto.</p>
+
+<p>Seguinte, eu fiquei encafifada com alguns testes que fiz e resolvi calcular um pouquinho, afinal não é nenhum bicho de 7 cabeças. Mas às vezes, como a gente lê e lê e raciocina rápido ao invés de botar na ponta do lápis, podem passar alguns detalhes.</p>
+
+<p>Jogo aqui os cálculos:</p>
+<p>Os dois primeiros são considerando o Root of Corruption/Origem da Maldição, representando alguém que têm altíssima MDEF (333). Os dois últimos blocos são sobre o Amdarais (tanto faz o azul ou o vermelho, pois a MDEF de ambos é a mesma = 40). Foi considerado o uso de 0 e 2 véspers. (Agora parando pra pensar, posso calcular com 1 vésper também, mas a discussão é um pouco mais funda).</p>
+
+<p>Em ordem, cada linha significa:</p>
+<ul>
+  <li>Sem valk drop/sem h motto,</li>
+  <li>1 hmotto</li>
+  <li>1 valk drop</li>
+  <li>2 h motto</li>
+  <li>2 valk drop</li>
+  <li>1 hmotto + 1 valk drop</li>
+</ul>
+
+
+<p>O modelo do cálculo é básico, sendo:</p>
+<ul>
+  <li>atkm = hard + soft, sendo um numero suposto,</li>
+  <li>redução do dano a partir da mdef = <a href="https://www.exorcisamus.com/p/hmdef.html" class="p-a">calculado aqui</a>,</li>
+
+  <li>modificador = bonus contra tamanho, oferecido pela valk drop, sendo ocultado quando valor é igual a 1</li>
+</ul>
+
+
+<p><b>atkm * redução * modificador = dano final</b></p>
+
+<p>Os outros modificadores foram ocultados porque seriam apenas mais um número a ser escrito. Como seriam iguais em todas as linhas e, portanto, não proveriam mudança, foram desconsiderados.</p>
+
+<p>O único lugar onde a hmotto ajudou a dar mais dano foi contra o Root (333 de mdef) na utilização das duas véspers. Mas porquê isso?</p>
+
+<p>Veja bem, 333 de mdef significa que o dano final será 30,79% do dano máximo (ideal). Quando se utiliza uma H motto, sobra uma mdef de 266, significando que o dano final será 34,57% do dano ideal, dando um aumento apenas de 3.78%, enquanto a utilização de uma valk drop (com impositio 5) daria um aumento de 15%.</p>
+
+<p>Com a utilização das véspers, sem contabilizar os acessórios, a mdef vai para 133, ou seja, dano final = 48.6% do dano ideal. Com a hmotto, a mdef vai para 66 e o dano final = 64.03% do dano ideal, significando um aumento de 15,43%. Com duas h motto, há um aumento de 51.4% contra 30% das duas valk drop.</p>
+
+<p>Segundo consta na wiki, o cálculo da redução a partir da mdef não sofre arredondamento.</p>
+
+<p><b>O que isso significa?</b></p>
+
+<p>Se você não tem 2 vespers (ou uma máscara oni com muita força na sua build), vai, uns 50/60% de mdef ignore provenientes seja do combo neo punk ou similiar, ou das véspers, não compensa usar h motto, porque a quantidade é muito baixa. E lembremos do comportamento da hmdef como uma assíntota (imagem mais abaixo). O resto de mdef que sobra faz muito mais diferença do que ignorado.</p>
+
+<img src="https://magedbgt.github.io/exorcisamus/img_post/hmdef%20assintota.png" alt="">
+
+<p>Lembrando que nosso limite/threshold é de 15% (bônus dado pela lágrima da valquíria contra todos os tamanhos quando se tem impositio nv 5), diria que a partir de 100 de mdef compensa usar a h motto, desde que se tenha os 50%/60% de mdef ignore provindos de outros ekips. Caso contrário, não compensa.</p>
+
+<p>Sobre testes ingame, eu fiz o teste usando meu set contra o amdarais e o root of corruption; postarei logo mais. No entanto, ele conta com 2 vespers e 2 valk drop contra 1 valk drop e 1 h motto. Já adianto que neste cenário, o resultado foi o mesmo do calculado na imagem, com a hmotto sobressaindo no root of corruption.</p>
+      </div>
+    </section>
+
+    <div onclick="topFunction()" id="topoBtn" title="Vá para o topo">
+      <span class="fa-stack fa-2x">
+        <i class="menu fas fa-heart fa-stack-2x"></i>
+        <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+
+    <footer>
+      <small>&copy; Magê Deungaro 2019<small>
+      <div class="social-links">
+        <a href="https://www.facebook.com/groups/1672243703028215/"><i class="fab fa-facebook fa-2x"></i></a><a href="http://www.youtube.com/c/Exorcisamus"><i class="fab fa-youtube fa-2x"></i></a>
+      </div>
+    </footer>
+
+    <script src="top.js"></script>
+    <script src="sidenav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
