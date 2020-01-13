@@ -5,7 +5,7 @@ function populateQuestions(number){
   }
 
   for (var i = 1; i < questionsId.length +1; i++) {
-    let value = localStorage.getIem(questionsId[i]),
+    let value = localStorage.getItem(questionsId[i]),
     el = document.getElementById(questionsId[i]);
     el.addEventListener('change', function(){saveAns();}, false );
     if (value != null) {
