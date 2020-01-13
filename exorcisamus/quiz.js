@@ -1,7 +1,7 @@
 let questionsId = [];
 function populateQuestions(number){
   for (let i = 1; i < number+1; i++) {
-    questionsId.push('q'+number);
+    questionsId.push('q'+i);
   }
 
   for (var i = 1; i < questionsId.length +1; i++) {
