@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="beforeRun">
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="./css/style.css" rel="stylesheet" type="text/css">
-    <title></title>
+    <link href="./fontawesome/css/all.css" rel="stylesheet" type="text/css">
+    <title>Magê[i]</title>
   </head>
-  <body>
-    <p>Welcome :3</p>
+  <body class="beforeRun">
+    <header>
+      <div class="container">
+        <code>
+          <h1></h1>
+      </code>
+    </header>
+    <div id="prompt">
+      <div class="container" id="code">
+        <code id="code2">
+          <span class="blueberry">let</span> me = <span class="papaya">life</span>.<span class="navy">getPersonByName</span>(<span class="grass">'Magê Deungaro'</span>);<br>
+      <span class="navy">revealContent</span>();<br>
+      </code>
+      <p id="runCode" onclick="ranCode(this);"><i class="fas fa-play"></i> RUN</p>
+      <p id="ranCode"><code>Loading...</code></p>
+      </div>
+    </div>
+    <div id="content">
+      <aside>
+        <div class="container">
+          <ul>
+          <li>Background</li>
+          <li>Hobbies
+            <ul>
+              <li>Web Design</li>
+              <li>Photography & Art</li>
+            </ul>
+          </li>
+          <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+      </aside>
+      <main>
+        <section>
+        <div class="container">
+          <h2>SECTION</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <small>&copy; Magê Deungaro</small>
+    </footer>
+    <script src="runCode.js"></script>
   </body>
 </html>

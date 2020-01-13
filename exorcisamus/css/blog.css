@@ -821,7 +821,7 @@ html {
   #hMob, #topoBtn, #quiz, #buttonPrint, #certPrint, #btnGerar,
   /*blogger*/
   #scripts, .post-labels, .post-footer-line-1,
-  .buildsPageCond, .status-msg-wrap{
+  .buildsPageCond, .status-msg-wrap, .inline-ad{
     display: none;
   }
 

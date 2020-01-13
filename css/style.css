@@ -2,6 +2,35 @@
   --blueberry: #504176;
   --strawberry: #fabbc5;
   --banana: #ecc743;
+  --darkblue: #0b032d;
+  --grape: #843b62;
+  --papaya: #f67e7d;
+  --caramel: #ffb997;
+  --vanilla: #fff1e9;
+  --milkshake: #ffd5d5;
+  --malibu: #fc7fb2;
+  --grafitte: #45454d;
+  --sakura: #ffbbcc;
+  --cherryblossom: #ffcccc;
+  --peach: #ffddcc;
+  --cream: #ffeecc;
+  --navy: #407088;
+  --oldnavy: #132743;
+  --grass: #90c86c;
+
+}
+
+.blueberry{
+  color: var(--blueberry);
+}
+.navy{
+  color: var(--navy);
+}
+.grass{
+  color: var(--grass);
+}
+.papaya{
+  color: var(--papaya);
 }
 
 html {
@@ -47,3 +76,98 @@ html {
       font-family: sans-serif;
       background: var(--strawberry);
     }
+
+    #runCode{
+      cursor: pointer;
+    }
+
+    .container{
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    #content{
+      min-height: 100vh;
+    }
+
+    aside{
+      float: left;
+      width: 25%;
+    }
+
+    ul{
+      list-style: none;
+      padding: none;
+    }
+
+    code h1{
+
+    }
+
+    .beforeRun #code2{
+      border-right: .15em solid orange; /* The typwriter cursor */
+      /* white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: .15em; /* Adjust as needed */
+      line-height: 4rem;
+      animation:
+      blink-caret .75s step-end infinite;
+      font-size: 2.5rem;
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
+    }
+
+    /* .code{
+      clip-path: circle(100%);
+      transition: .5s;
+    } */
+
+   #prompt{
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: var(--darkblue);
+      color: var(--cream);
+      transition: 1s all;
+      clip-path: circle(100%);
+      opacity: 1;
+    }
+
+    #code{
+      padding: 37vh 0;
+    }
+
+    html.beforeRun{
+      overflow: hidden;
+    }
+
+    .clipPath#prompt{
+    transition: 1s all;
+    clip-path: circle(0%);
+    opacity: 0;
+    }
+
+  #ranCode{
+    background: var(--blueberry);
+    transition: width 4s ease-in-out;
+    width: 0%;
+    color: var(--darkblue);
+    /* opacity: 0; */
+  }
+
+  #ranCode.ranCode{
+    width: 100%;
+    transition: width 4s ease-in-out;
+    color: var(--cream);
+    /* opacity: 1; */
+  }
+
+  #runCode.ranCode{
+    display: none;
+  }

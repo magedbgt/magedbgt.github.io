@@ -3,106 +3,138 @@ window.addEventListener("load", activate, false);
 const opOp = "<option>",
 endOp = "</option>";
 
-function activate() {
-  let noOratio = document.getElementById("noOratio"),
-  skills = document.getElementById("skillAB"),
-  noWeapon = document.getElementById("noWeapon"),
-  noAmp = document.getElementById("noMystAmpl");
+//variables
+//checkboxes
+let
+noWeapon = document.getElementById("noWeapon"),
+noAmp = document.getElementById("noMystAmpl"),
+noOratio = document.getElementById("noOratio"),
+sprito = document.getElementById("priestSpirit");
 
-  //change events
-  skills.addEventListener("change", populateSkill, false);
-  noWeapon.addEventListener("change", disableWeapon, false);
-  noOratio.addEventListener("change", disableOratio, false);
-  noAmp.addEventListener("change", disableAmplification, false);
+//selects
+let skills = document.getElementById("skillAB"),
+skillLvl = document.getElementById("skillLvl"),
+lvlChar = document.getElementById("level"),
+atqmTotal = document.getElementById('atqmTotal'),
+mdefMon = document.getElementById('mdefMon'),
+mdefIgnore = document.getElementById('mdefIgnore'),
+propertyMon = document.getElementById('propertyMon'),
+lvlPropMon = document.getElementById('lvlPropMon');
+
+
+//values
+let
+selectedSkill = skills.value,
+lvlSkill = parseInt(skillLvl.value),
+lvlAb = parseInt(lvlChar).value),
+baseMATK = document.getElementById("weaponBaseMatk").value,
+weaponLvl = parseInt(document.getElementById("weaponLvl").value),
+weaponRefine = parseInt(document.getElementById("weaponRefine").value),
+weaponBaseDmg = document.getElementById("weaponBaseDmg").value,
+oratioLvl_ = document.getElementById("oratioLvl").value,
+mystLvl = document.getElementById("amplMistLvl").value;
+
+function populateArray(min, max, array){
+  while(min < max+1){
+    array.push(min++);
+  }
+}
+
+function popularSelects(array, id){
+    for (let i = 0; i < array.length; i++) {
+      document.getElementById(id).innerHTML += opOp + array[i] + endOp;
+    }
+}
+
+function activate() {
 
   //checked items
   noWeapon.checked = true;
   noOratio.checked = true;
   noAmp.checked = true;
 
+  //change events
+  skills.addEventListener("change", populateSkill, false);
+  noWeapon.addEventListener("change", function(){disableOptions(noWeapon, ["weaponLvl","weaponRefine","weaponBaseDmg","weaponBaseMatk"]);}, false);
+  noOratio.addEventListener("change", function(){disableOptions(noOratio, ["oratioLvl"]);}, false);
+  noAmp.addEventListener("change", function(){disableOptions(noAmp, ["intAmpl","dexAmpl","sorAmpl","amplMistLvl"]);}, false);
+
   //call
-  disableWeapon();
-  disableOratio();
-  disableAmplification();
+  disableOptions(noWeapon, ["weaponLvl","weaponRefine","weaponBaseDmg","weaponBaseMatk"]);
+  // disableWeapon();
+  // disableOratio();
+  disableOptions(noOratio, ["oratioLvl"]);
+  // disableAmplification();
+  disableOptions(noAmp, ["intAmpl","dexAmpl","sorAmpl","amplMistLvl"]);
 }
 
-function disableWeapon() {
-  let weaponLvl_ = document.getElementById("weaponLvl"),
-  weaponRefine_ = document.getElementById("weaponRefine"),
-  weaponBaseDmg_ = document.getElementById("weaponBaseDmg"),
-  weaponBaseMatk_ = document.getElementById("weaponBaseMatk");
-
-  if (noWeapon.checked == true) {
-    weaponLvl_.disabled = true;
-    weaponRefine_.disabled = true;
-    weaponBaseDmg_.disabled = true;
-    weaponBaseMatk_.disabled = true;
-  }else {
-    weaponLvl_.disabled = false;
-    weaponRefine_.disabled = false;
-    weaponBaseDmg_.disabled = false;
-    weaponBaseMatk_.disabled = false;
+function disableOptions(checkbox, array){
+  for (let i = 0; i < array.length; i++) {
+    document.getElementById(array[i]).disabled = checkbox.checked;
   }
 }
 
-function disableOratio() {
-  let oratio_ = document.getElementById("oratioLvl");
+// function disableWeapon() {
+//   let weaponLvl_ = document.getElementById("weaponLvl"),
+//   weaponRefine_ = document.getElementById("weaponRefine"),
+//   weaponBaseDmg_ = document.getElementById("weaponBaseDmg"),
+//   weaponBaseMatk_ = document.getElementById("weaponBaseMatk");
+//
+//     weaponLvl_.disabled = noWeapon.checked;
+//     weaponRefine_.disabled = noWeapon.checked;
+//     weaponBaseDmg_.disabled = noWeapon.checked;
+//     weaponBaseMatk_.disabled = noWeapon.checked;
+// }
 
-  if (noOratio.checked == true) {
-    oratio_.disabled = true;
-  }else {
-    oratio_.disabled = false;
-  }
-}
+// function disableOratio() {
+//   let oratio_ = document.getElementById("oratioLvl");
+//     oratio_.disabled = noOratio.checked;
+// }
 
-function disableAmplification(){
-  let int = document.getElementById("intAmpl"),
-  dex = document.getElementById("dexAmpl"),
-  luk = document.getElementById("sorAmpl"),
-  ampLvl = document.getElementById("amplMistLvl"),
-  noAmp = document.getElementById("noMystAmpl");
-
-  if (noAmp.checked == true) {
-    int.disabled = true;
-    dex.disabled = true;
-    luk.disabled = true;
-    ampLvl.disabled = true;
-  }else {
-    int.disabled = false;
-    dex.disabled = false;
-    luk.disabled = false;
-    ampLvl.disabled = false;
-  }
-}
+// function disableAmplification(){
+//   let int = document.getElementById("intAmpl"),
+//   dex = document.getElementById("dexAmpl"),
+//   luk = document.getElementById("sorAmpl"),
+//   ampLvl = document.getElementById("amplMistLvl"),
+//   noAmp = document.getElementById("noMystAmpl");
+//
+//   int.disabled = noAmp.checked;
+//   dex.disabled = noAmp.checked;
+//   luk.disabled = noAmp.checked;
+//   ampLvl.disabled = noAmp.checked;
+// }
 
 function populateSkill() {
   //popular select skill level
   let skillLvlArr = [],
-  skillLevel = 1,
-  selectedSkill = document.getElementById("skillAB").value,
-  skillLvlEl = document.getElementById("skillLvl"),
-  sprito = document.getElementById("priestSpirit");
+  skillLevel = 1;
+
 
   if (selectedSkill == "Luz Divina") {
-      skillLvlEl.innerHTML = opOp+1+endOp;
+      skillLvl.innerHTML = opOp+1+endOp;
     }
     else if (selectedSkill == "Magnus Exorcismus" || selectedSkill == "Adoramus") {
-        skillLvlEl.innerHTML = "";
-        while(skillLevel < 11){
-          skillLvlArr.push(skillLevel++);
-        }
-        for (let i = 0; i < skillLvlArr.length; i++) {
-          skillLvlEl.innerHTML += opOp + skillLvlArr[i] + endOp;
-        }
+        skillLvl.innerHTML = "";
+        populateArray(skillLevel, 10, skillLvlArr);
+        // while(skillLevel < 11){
+        //   skillLvlArr.push(skillLevel++);
+        // }
+
+        popularSelects(skillLvlArr, 'skillLvl');
+        // for (let i = 0; i < skillLvlArr.length; i++) {
+        //   skillLvl.innerHTML += opOp + skillLvlArr[i] + endOp;
+        // }
     }
     else {
-      skillLvlEl.innerHTML = "";
-      while(skillLevel < 6){
-        skillLvlArr.push(skillLevel++);
-      }
-      for (let i = 0; i < skillLvlArr.length; i++) {
-        document.getElementById("skillLvl").innerHTML += opOp + skillLvlArr[i] + endOp;
-      }
+      skillLvl.innerHTML = "";
+      populateArray(skillLevel, 5, skillLvlArr);
+      // while(skillLevel < 6){
+      //   skillLvlArr.push(skillLevel++);
+      // }
+      popularSelects(skillLvlArr, 'skillLvl');
+      // for (let i = 0; i < skillLvlArr.length; i++) {
+      //   document.getElementById("skillLvl").innerHTML += opOp + skillLvlArr[i] + endOp;
+      // }
     }
 
     if (selectedSkill == "Luz Divina") {
@@ -142,49 +174,74 @@ function selectLvlPopulate() {
   const oratioMax = 10;
 
   //popular as arrays
+
+
   //level personagem
-  while(lvlMin < lvlMax+1){
-    lvl.push(lvlMin++);
-  }
+  populateArray(lvlMin, lvlMax, lvl);
+  // while(lvlMin < lvlMax+1){
+  //   lvl.push(lvlMin++);
+  // }
 
   //refine
-  while (refineMin < refineMax +1) {
-    refine.push(refineMin++);
-  }
+  populateArray(refineMin, refineMax, refine);
+  // while (refineMin < refineMax +1) {
+  //   refine.push(refineMin++);
+  // }
 
   //oratio
-  while (oratioMin < oratioMax +1) {
-    oratioLvl.push(oratioMin++);
-  }
+  populateArray(oratioMin, oratioMax, oratioLvl);
+  // while (oratioMin < oratioMax +1) {
+  //   oratioLvl.push(oratioMin++);
+  // }
 
   //popular selects
-  for (let i = 0; i < lvl.length; i++) {
-    document.getElementById("level").innerHTML += opOp + lvl[i] + endOp;
-  }
 
-  for (let i = 0; i < skills.length; i++) {
-    document.getElementById("skillAB").innerHTML += opOp + skills[i] + endOp;
-  }
+  //lvl
+  popularSelects(lvl, 'level');
+  // for (let i = 0; i < lvl.length; i++) {
+  //   document.getElementById("level").innerHTML += opOp + lvl[i] + endOp;
+  // }
 
-  for (let i = 0; i < refine.length; i++) {
-    document.getElementById("weaponRefine").innerHTML += opOp + refine[i] + endOp;
-  }
+  //skills
+  popularSelects(skills, 'skillAB');
+  // for (let i = 0; i < skills.length; i++) {
+  //   document.getElementById("skillAB").innerHTML += opOp + skills[i] + endOp;
+  // }
 
-  for (let i = 0; i < propMon.length; i++) {
-    document.getElementById("propertyMon").innerHTML += opOp + propMon[i] + endOp;
-  }
+  //refino
+  popularSelects(refine, 'weaponRefine');
+  // for (let i = 0; i < refine.length; i++) {
+  //   document.getElementById("weaponRefine").innerHTML += opOp + refine[i] + endOp;
+  // }
 
-  for (let i = 0; i < propertyMonLvl.length; i++) {
-    document.getElementById("lvlPropMon").innerHTML += opOp + propertyMonLvl[i] + endOp;
-    document.getElementById("weaponLvl").innerHTML += opOp + propertyMonLvl[i] + endOp;
-  }
+  //propriedade do monstro
+  popularSelects(propMon, 'propertyMon');
+  // for (let i = 0; i < propMon.length; i++) {
+  //   document.getElementById("propertyMon").innerHTML += opOp + propMon[i] + endOp;
+  // }
 
-  for (let i = 0; i < baseMATK.length; i++) {
-    document.getElementById("weaponBaseMatk").innerHTML += opOp + baseMATK[i] + endOp;
-  }
+  //lvl propriedade do monstro
+  popularSelects(propertyMonLvl, 'lvlPropMon');
+  //lvl arma
+  popularSelects(propertyMonLvl, 'weaponLvl');
+  // for (let i = 0; i < propertyMonLvl.length; i++) {
+  //   document.getElementById("lvlPropMon").innerHTML += opOp + propertyMonLvl[i] + endOp;
+  //   document.getElementById("weaponLvl").innerHTML += opOp + propertyMonLvl[i] + endOp;
+  // }
 
-  for (let i = 0; i < oratioLvl.length; i++) {
-    document.getElementById("oratioLvl").innerHTML += opOp + oratioLvl[i] + endOp;
-    document.getElementById("amplMistLvl").innerHTML += opOp + oratioLvl[i] + endOp;
-  }
+  //atkm base da arma
+  popularSelects(baseMATK, 'weaponBaseMatk');
+  // for (let i = 0; i < baseMATK.length; i++) {
+  //   document.getElementById("weaponBaseMatk").innerHTML += opOp + baseMATK[i] + endOp;
+  // }
+
+  //lvl oratio
+  popularSelects(oratioLvl, 'oratioLvl');
+
+  //lvl amplificação mistica
+  popularSelects(oratioLvl, 'amplMistLvl');
+  // for (let i = 0; i < oratioLvl.length; i++) {
+  //   document.getElementById("oratioLvl").innerHTML += opOp + oratioLvl[i] + endOp;
+  //   document.getElementById("amplMistLvl").innerHTML += opOp + oratioLvl[i] + endOp;
+  // }
 }
