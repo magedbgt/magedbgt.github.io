@@ -21,7 +21,6 @@ let saveSlot = function(){
       areas2.push(document.getElementById(slot2[i]).checked);
     }
 
-
     if (slots == 'alt0') {
         for (let i = 0; i < slot.length; i++) {
           localStorage.setItem(slot[i]+"0",areas[i]);
@@ -48,7 +47,6 @@ let saveSlot = function(){
         localStorage.setItem('skLvlOpt2', skLvlOpt);
       }
 };
-document.getElementById('saveBtn').onclick = saveSlot;
 
 let loadSlot = function(){
   let slots = document.getElementById('slots').value;
@@ -79,4 +77,5 @@ let loadSlot = function(){
   }
 };
 
+document.getElementById('saveBtn').onclick = saveSlot;
 document.getElementById('loadBtn').onclick = loadSlot;

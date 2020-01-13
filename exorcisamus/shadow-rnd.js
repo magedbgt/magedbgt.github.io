@@ -26,6 +26,8 @@ function randomArt(){
   innerHTML =
   'div.abimg{background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('+arte+')!important;background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url('+arte+')!important;background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('+arte+')!important;}';
 
-homeHeader.innerHTML = innerHTML;
+if (homeHeader != null) {
+  homeHeader.innerHTML = innerHTML;
+};
 
 }
