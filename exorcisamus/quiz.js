@@ -4,7 +4,7 @@ function populateQuestions(number){
     questionsId.push('q'+i);
   }
 
-  for (var i = 0; i < questionsId.length; i++) {
+  for (let i = 0; i < questionsId.length; i++) {
     let value = localStorage.getItem(questionsId[i]),
     el = document.getElementById(questionsId[i]);
     el.addEventListener('change', function(){saveAns();}, false );
@@ -51,7 +51,7 @@ function check(){
 		}
 
 	//answers
-		const ans = ["d","c","d","c","a","a","c","a","b","b"];
+		const ans = ["d","c","d","c","a","a","c","a","b","a"];
 		let emp = "empty",
 		correct = 0;
 
@@ -63,7 +63,7 @@ function check(){
 				for (let i = 0; i < questions.length; i++) {
 					if (questions[i] == ans[i]) {
 						correct++;
-            console.log(questions[i]+" "+ans[i]+" "+correct);
+            console.log(questions[i]+" "+ans[i]+" "+correct+ " "+ i);
 						}
 					}
 
