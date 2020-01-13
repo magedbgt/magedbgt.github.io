@@ -15,7 +15,7 @@ function populateQuestions(number){
 }
 
 function saveAns(){
-  for (let i = 1; i < questionsId.length +1; i++) {
+  for (let i = 0; i < questionsId.length; i++) {
     let value = document.getElementById(questionsId[i]).value;
     localStorage.setItem(questionsId[i], value);
   }
