@@ -26,7 +26,7 @@ lvlPropMon = document.getElementById('lvlPropMon');
 let
 selectedSkill = skills.value,
 lvlSkill = parseInt(skillLvl.value),
-lvlAb = parseInt(lvlChar).value),
+lvlAb = parseInt(lvlChar.value),
 baseMATK = document.getElementById("weaponBaseMatk").value,
 weaponLvl = parseInt(document.getElementById("weaponLvl").value),
 weaponRefine = parseInt(document.getElementById("weaponRefine").value),
