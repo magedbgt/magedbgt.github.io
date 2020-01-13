@@ -30,7 +30,7 @@ lvlAb = parseInt(lvlChar.value),
 baseMATK = document.getElementById("weaponBaseMatk").value,
 weaponLvl = parseInt(document.getElementById("weaponLvl").value),
 weaponRefine = parseInt(document.getElementById("weaponRefine").value),
-weaponBaseDmg = document.getElementById("weaponBaseDmg").value,
+weaponBaseDmg = document.getElementById("weaponBaseDmg"),
 oratioLvl_ = document.getElementById("oratioLvl").value,
 mystLvl = document.getElementById("amplMistLvl").value;
 
