@@ -47,11 +47,11 @@ function check(){
 	//respostas
 		let questions = [];
 		for (let i = 0; i < questionsId.length; i++) {
-			questions.push(document.getElementById(questionsId[0]).value);
+			questions.push(document.getElementById(questionsId[i]).value);
 		}
 
 	//answers
-		const ans = ["d","c","d","c","a","a","c","a","b","a"];
+		const ans = ["d","c","d","c","a","a","c","a","b","b"];
 		let emp = "empty",
 		correct = 0;
 
