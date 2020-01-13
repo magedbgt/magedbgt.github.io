@@ -19,20 +19,10 @@ atqmTotal = document.getElementById('atqmTotal'),
 mdefMon = document.getElementById('mdefMon'),
 mdefIgnore = document.getElementById('mdefIgnore'),
 propertyMon = document.getElementById('propertyMon'),
-lvlPropMon = document.getElementById('lvlPropMon');
+lvlPropMon = document.getElementById('lvlPropMon'),
+weaponBaseDmg = document.getElementById("weaponBaseDmg");
 
 
-//values
-let
-selectedSkill = skills.value,
-lvlSkill = parseInt(skillLvl.value),
-lvlAb = parseInt(lvlChar.value),
-baseMATK = document.getElementById("weaponBaseMatk").value,
-weaponLvl = parseInt(document.getElementById("weaponLvl").value),
-weaponRefine = parseInt(document.getElementById("weaponRefine").value),
-weaponBaseDmg = document.getElementById("weaponBaseDmg"),
-oratioLvl_ = document.getElementById("oratioLvl").value,
-mystLvl = document.getElementById("amplMistLvl").value;
 
 function populateArray(min, max, array){
   while(min < max+1){
@@ -249,10 +239,15 @@ function selectLvlPopulate() {
 //calculando o Dano
 function calcResult() {
   //Personagem
-  // let lvlAb = parseInt(document.getElementById("level").value),
-  // lvlSkill = parseInt(document.getElementById("skillLvl").value),
-  // selectedSkill = document.getElementById("skillAB").value,
-  let atkm,  skmod;
+  let selectedSkill = skills.value,
+  lvlSkill = parseInt(skillLvl.value),
+  lvlAb = parseInt(lvlChar.value),
+  baseMATK = document.getElementById("weaponBaseMatk").value,
+  weaponLvl = parseInt(document.getElementById("weaponLvl").value),
+  weaponRefine = parseInt(document.getElementById("weaponRefine").value),
+  oratioLvl_ = document.getElementById("oratioLvl").value,
+  mystLvl = document.getElementById("amplMistLvl").value,
+  atkm,  skmod;
 
   if (atqmTotal.value == "") {
       atkm = 0;
