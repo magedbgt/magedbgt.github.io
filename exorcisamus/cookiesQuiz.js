@@ -49,7 +49,7 @@ function saveAns(){
   for (let i = 1; i < questionsId.length +1; i++) {
     let value = document.getElementById(questionsId[i]).value;
     localStorage.setItem(questionsId[i], value);
-  // }
+  }
   // let q1 = document.getElementById('q1').value,
   // q2 = document.getElementById('q2').value,
   // q3 = document.getElementById('q3').value,

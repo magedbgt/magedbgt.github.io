@@ -1,3 +1,28 @@
+let questionsId = [];
+function populateQuestions(number){
+  for (let i = 1; i < number+1; i++) {
+    questionsId.push('q'+number);
+  }
+
+  for (var i = 1; i < questionsId.length +1; i++) {
+    let value = localStorage.getIem(questionsId[i]),
+    el = document.getElementById(questionsId[i]);
+    el.addEventListener('change', function(){saveAns();}, false );
+    if (value != null) {
+      el.value = value;
+    }
+  }
+}
+
+function saveAns(){
+  for (let i = 1; i < questionsId.length +1; i++) {
+    let value = document.getElementById(questionsId[i]).value;
+    localStorage.setItem(questionsId[i], value);
+  }
+};
+
+window.addEventListener('load', function(){populateQuestions(10);}, false );
+
 function quizInit() {
 	let quizz = document.getElementById("quiz"),
 	quizIntro = document.getElementById("quizIntro"),
@@ -21,16 +46,6 @@ function check(){
 
 	//respostas
 		let questions = [];
-		// questions[0] = document.getElementById("q1").value;
-		// questions[1] = document.getElementById("q2").value;
-		// questions[2] = document.getElementById("q3").value;
-		// questions[3] = document.getElementById("q4").value;
-		// questions[4] = document.getElementById("q5").value;
-		// questions[5] = document.getElementById("q6").value;
-		// questions[6] = document.getElementById("q7").value;
-		// questions[7] = document.getElementById("q8").value;
-		// questions[8] = document.getElementById("q9").value;
-		// questions[9] = document.getElementById("q10").value;
 		for (let i = 0; i < questionsId.length; i++) {
 			questions.push(document.getElementById(questionsId[0]).value);
 		}
@@ -75,7 +90,6 @@ function check(){
 					n = 2;
 				}
 
-			//	result.style.visibility = "visible";
 				quizz.style.display = "none";
 				msg.innerHTML = messages[n];
 				nota.innerHTML = "Nota: " + correct * 10 + "%" ;
@@ -83,4 +97,15 @@ function check(){
 			}
 			score();
 		}
+}
+
+function printCert(certPrint) {
+   let certificado = document.getElementById(certPrint).innerHTML,
+   certificado_ = document.body.innerHTML;
+
+   document.body.innerHTML = certificado;
+
+   window.print();
+
+   document.body.innerHTML = certificado_;
 }
