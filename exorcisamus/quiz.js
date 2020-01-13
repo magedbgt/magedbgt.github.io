@@ -63,6 +63,7 @@ function check(){
 				for (let i = 0; i < questions.length; i++) {
 					if (questions[i] == ans[i]) {
 						correct++;
+            console.log(questions[i]+" "+ans[i]+" "+correct);
 						}
 					}
 
