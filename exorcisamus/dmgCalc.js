@@ -98,6 +98,7 @@ function populateSkill() {
   //popular select skill level
   let skillLvlArr = [],
   skillLevel = 1;
+  let selectedSkill = skills.value;
 
 
   if (selectedSkill == "Luz Divina") {

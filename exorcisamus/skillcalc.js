@@ -3,13 +3,30 @@ window.addEventListener("load", populateSelects, false);
 const opOp = "<option>",
 endOp = "</option>";
 
+function tabFun(el, a) {
+  let i, tabC = document.getElementsByClassName("tabContent");
+  for (i = 0; i < tabC.length; i++) {
+    tabC[i].style.display = "none";
+    tabC[i].classList.remove('tabflex');
+  }
+
+  // for (i = 0; i < htabs.length; i++) {
+  //     htabs[i].classList.remove('actvTab');
+  //   }
+      document.getElementById(a).classList.add('tabflex');
+  // el.classList.add('actvTab');
+}
+
+
 function populateSelects(){
   let acolyteJobPt = document.getElementById("acolyteJobPt"),
   priestJobPt = document.getElementById("priestJobPt"),
   abJobPt = document.getElementById("abJobPt"),
-  trans = document.getElementById("transCheck");
+  trans = document.getElementById("transCheck"),
+  thor = document.getElementById('thorCheck');
 
   trans.checked = true;
+  thor.checked = false;
 
   //acolyte
   let acoJobMin = 40,
@@ -22,6 +39,20 @@ function populateSelects(){
   let abJobs = [],
   abJobMin = 1;
   const abJobMax = 60;
+
+  thor.addEventListener("change", servidor, false);
+
+  function servidor(){
+
+      let serverSkill = ["acolyte1",
+      "acolyte2"];
+    for (let i = 0; i < serverSkill.length; i++) {
+      // if (thor.checked == true) {
+        document.getElementById(serverSkill[i]+'_').classList.toggle('toggleNone');
+        document.getElementById(serverSkill[i]).disabled = document.getElementById(serverSkill[i]+'_').classList.contains('toggleNone');
+      // }
+    }
+  }
 
   trans.addEventListener("change", ativar, false);
   function ativar() {
@@ -50,14 +81,22 @@ function populateSelects(){
     function hiddenSumo() {
       let sumo_ = [ document.getElementById("sumoSacer"),
       document.getElementById("priest18_"),
-      document.getElementById("priest11_")];
+      document.getElementById("priest11_")],
+      sumoSelect = [document.getElementById("priest18"),
+      document.getElementById("priest11")];
+
+
 
       for (let i = 0; i < sumo_.length; i++) {
-        if (sumo_[i].style.visibility === "hidden") {
-          sumo_[i].style.visibility = "visible";
+        if (i == 0) {
+          sumo_[i].classList.toggle('toggleNone');
         }else {
-          sumo_[i].style.visibility = "hidden";
+          sumo_[i].classList.toggle('toggleHidden');
         }
+      }
+
+      for (let i = 0; i < sumoSelect.length; i++) {
+          sumoSelect[i].disabled = sumo_[i+1].classList.contains('toggleHidden');
       }
 
     }
@@ -178,17 +217,21 @@ for (let i = 0; i < arrx.length; i++) {
   }
 }
 
-//imgs
-let totalItens = arrSkills[0].length+arrSkills[1].length+arrSkills[2].length+arrSkills[3].length+arrSkills[4].length+arrSkills[5].length;
-// alert(arrSkills[0].length+arrSkills[1].length+arrSkills[2].length+arrSkills[3].length+arrSkills[4].length+arrSkills[5].length-1);
+  //imgs
+  let totalItens = arrSkills[0].length+arrSkills[1].length+arrSkills[2].length+arrSkills[3].length+arrSkills[4].length+arrSkills[5].length;
+  // alert(arrSkills[0].length+arrSkills[1].length+arrSkills[2].length+arrSkills[3].length+arrSkills[4].length+arrSkills[5].length-1);
 
-for (let i=0; i < totalItens; i++) {
-    document.getElementById("s"+i).src = "./img/skills/"+i+".png";
-}
+  for (let i=0; i < totalItens; i++) {
+      document.getElementById("s"+i).src = "./img/skills/"+i+".png";
+  }
 
+  acolyteJobPt.addEventListener('change', function(){points(this,this.id);},false);
+  priestJobPt.addEventListener('change', function(){points(this,this.id);},false);
+  abJobPt.addEventListener('change', function(){points(this,this.id);},false);
 
-
-
-
+  function points(select, targetId){
+    let target = document.getElementById(targetId+'s');
+    target.innerHTML = select.value;
+  }
 
 }

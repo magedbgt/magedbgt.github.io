@@ -1,56 +1,217 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="beforeRun">
   <head>
+    <title>mage.life.show()</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="./css/style.css" rel="stylesheet" type="text/css">
     <link href="./fontawesome/css/all.css" rel="stylesheet" type="text/css">
-    <title>Magê[i]</title>
+
+    <!-- css vendors -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Major+Mono+Display&display=swap" rel="stylesheet">
+
   </head>
+
   <body class="beforeRun">
-    <header>
-      <div class="container">
-        <code>
-          <h1></h1>
-      </code>
-    </header>
-    <div id="prompt">
+
+
+    <!-- <div id="prompt">
       <div class="container" id="code">
+        <code class="comment">
+          <span>
+            //Bem-vindo!<br>
+            //Para continuar, toque / clique em 'run' ou aperte 'enter'<br>
+          </span>
+        </code>
+
         <code id="code2">
-          <span class="blueberry">let</span> me = <span class="papaya">life</span>.<span class="navy">getPersonByName</span>(<span class="grass">'Magê Deungaro'</span>);<br>
-      <span class="navy">revealContent</span>();<br>
+          <span class="magenta">let</span> me = <span class="papaya">life</span>.<span class="sky">getPersonByName</span>(<span class="grass">'Magê Deungaro'</span>);<br>
+          <span class="papaya">window</span>.<span class="sky">addEventListener</span>('click', <span class="magenta">function</span>(){<span class="sky">revealAbout</span>(me);}, <span class="banana">false</span>);
       </code>
       <p id="runCode" onclick="ranCode(this);"><i class="fas fa-play"></i> RUN</p>
       <p id="ranCode"><code>Loading...</code></p>
       </div>
-    </div>
-    <div id="content">
-      <aside>
-        <div class="container">
+    </div> -->
+    <video autoplay muted loop id="bckgVideo">
+      <source src="video/Network-r.webm" type="video/webm">
+      Your browser does not support HTML5 video.
+    </video>
+
+
+    <div class="background"></div>
+
+    <nav>
+      <div class="container">
+        <div class="logo">mage.portfolio</div>
+        <div class="menu major">
           <ul>
-          <li>Background</li>
-          <li>Hobbies
-            <ul>
-              <li>Web Design</li>
-              <li>Photography & Art</li>
-            </ul>
-          </li>
-          <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-        </ul>
+            <li>Início</li>
+            <li>Projetos</li>
+            <li>Sobre</li>
+            <li>Contato</li>
+          </ul>
+        </div>
       </div>
-      </aside>
-      <main>
-        <section>
+    </nav>
+
+    <header>
+      <div class="container">
+        <h1>
+          <code>
+            Olá, sou a
+            <span class="lilac" id="change">
+              <!-- Maria Eugênia -->
+            </span>
+            e adoro
+            <em>desenvolver</em>
+          </code>
+        </h1>
+    </header>
+
+    <main>
+      <section class="work">
         <div class="container">
-          <h2>SECTION</h2>
+          <h2 class="major">#Trabalhos</h2>
+        </div>
+
+        <div class="container gridCont">
+          <img src="img/ba.png" class="grid" alt="">
+          <div class="grid txt">
+            <h2>
+              <a href="https://www.borgatoadvocacia.com.br/">
+                Borgato Advocacia
+                <i class="fas fa-link"></i>
+              </a>
+            </h2>
+            <p>
+              <code>
+                #2019 #blogger #HTML5 #CSS3 #JS #GitHub
+              </code>
+            </p>
+          </div>
+        </div>
+
+        <div class="container gridCont">
+          <img class="grid" src="img/exorcisamus.png" alt="">
+          <div class="grid txt">
+            <h2>
+              <a href="https://www.exorcisamus.com/">
+                Exorcisamus
+                <i class="fas fa-link"></i>
+              </a>
+            </h2>
+            <p>
+              <code>
+                #2019 #blogger #HTML5 #CSS3 #JS #GitHub
+              </code>
+            </p>
+          </div>
+        </div>
+
+        <div class="container gridCont">
+          <img class="grid" src="img/gefro.png" alt="">
+          <div class="grid txt">
+            <h2>
+              <a href="https://www.gefro.com.br/">
+                GEFRO • Assessoria e Consultoria <br>em Manutenção e Controle de Frotas
+                <i class="fas fa-link"></i>
+              </a>
+            </h2>
+            <p>
+              <code>
+                #2019 #GitHub #HTML5 #CSS3 #JS
+              </code>
+            </p>
+          </div>
+        </div>
+
+        <div class="container gridCont">
+          <img class="grid" src="img/mvt.png" alt="">
+          <div class="grid txt">
+            <h2>
+              <a href="https://mostvaluabletimer.com/">
+                MVT • Most Valuable Timer
+                <i class="fas fa-link"></i>
+              </a>
+            </h2>
+            <p>
+              <code>
+                #2019 #GitHub #HTML5 #CSS3 #JS #PWA
+              </code>
+            </p>
+          </div>
+        </div>
+
+      </section>
+      <section class="sobre">
+        <div class="container">
+          <h2 class="major">#Sobre</h2>
+        </div>
+        <div class="ide">
+          <div class="container">
+            <p>
+              <code>
+                <!-- educacao -->
+                <span class="magenta">let</span>
+                educacao = [<br>
+                &nbsp;{<br>
+                &nbsp;&nbsp;<span class="papaya">escola:</span>
+                <span class="grass">'Universidade de São Paulo - ESALQ/USP'</span>,<br>
+                &nbsp;&nbsp;<span class="papaya">curso:</span>
+                <span class="grass">'Engenharia Agronômica'</span>,<br>
+                &nbsp;&nbsp;<span class="papaya">tipo:</span>
+                <span class="grass">'Bacharelado'</span>,<br>
+                &nbsp;&nbsp;<span class="papaya">ano:</span>
+                <span class="grass">'2012 a 2019'</span>
+                <br>&nbsp;},<br>
+
+                &nbsp;{<br>
+                &nbsp;&nbsp;<span class="papaya">escola:</span>
+                <span class="grass">'Faculdade de Tecnologia de Jahu - FATEC JAHU'</span>,<br>
+                &nbsp;&nbsp;<span class="papaya">curso:</span>
+                <span class="grass">'Sistemas para Internet'</span>,<br>
+                &nbsp;&nbsp;<span class="papaya">tipo:</span>
+                <span class="grass">'Tecnologia'</span>,<br>
+                &nbsp;&nbsp;<span class="papaya">ano:</span>
+                <span class="grass">'2020 a 2023'</span>
+                <br>&nbsp;}
+                <br>];
+              </code>
+            </p>
+            <p>
+              <code>
+                <!-- skills -->
+                <br>
+                <span class="magenta">let</span>
+                conhecimentos = [
+                &nbsp;<span class="grass">'HTML5'</span>,
+                &nbsp;<span class="grass">'CSS3'</span>,
+                &nbsp;<span class="grass">'JS'</span>,
+                &nbsp;<span class="grass">'Git/GitHub'</span>
+                ];
+              </code>
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <h2 class="major">#Contato</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-        </section>
-      </main>
-    </div>
+      </section>
+    </main>
+
     <footer>
-      <small>&copy; Magê Deungaro</small>
+      <div class="container">
+        <small>&lt;!-- feito com ♥ por &copy; Magê Deungaro --&gt;</small>
+      </div>
     </footer>
+
     <script src="runCode.js"></script>
+    <script src="main.js"></script>
+
   </body>
 </html>
