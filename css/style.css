@@ -207,6 +207,13 @@ nav li{
   margin-top: 2rem;
 }
 
+img.scroll {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 2rem;
+}
+
 h2.major {
     font-size: 6rem;
     font-weight: bold;
@@ -291,9 +298,12 @@ img.grid {
   padding: 30vh 0;
 }
 
-/* html.beforeRun{
+.beforeRun nav, .beforeRun main, .beforeRun footer, .beforeRun header {
+  display: none;
+}
+html.beforeRun{
   overflow: hidden;
-} */
+}
 
 .clipPath#prompt{
 transition: 1s all;

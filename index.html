@@ -15,7 +15,7 @@
   <body class="beforeRun">
 
 
-    <!-- <div id="prompt">
+    <div id="prompt">
       <div class="container" id="code">
         <code class="comment">
           <span>
@@ -31,14 +31,14 @@
       <p id="runCode" onclick="ranCode(this);"><i class="fas fa-play"></i> RUN</p>
       <p id="ranCode"><code>Loading...</code></p>
       </div>
-    </div> -->
+    </div>
     <video autoplay muted loop id="bckgVideo">
       <source src="video/Network-r.webm" type="video/webm">
       Your browser does not support HTML5 video.
     </video>
 
 
-    <div class="background"></div>
+    <!-- <div class="background"></div> -->
 
     <nav>
       <div class="container">
@@ -63,15 +63,16 @@
               <!-- Maria Eugênia -->
             </span>
             e adoro
-            <em>desenvolver</em>
+            <em id="atividade">desenvolver</em>
           </code>
         </h1>
+        <img src="img/scroll.svg" alt="scroll" class="scroll">
     </header>
 
     <main>
       <section class="work">
         <div class="container">
-          <h2 class="major">#Trabalhos</h2>
+          <h2 class="major" id="work">#Trabalhos</h2>
         </div>
 
         <div class="container gridCont">
@@ -145,7 +146,7 @@
       </section>
       <section class="sobre">
         <div class="container">
-          <h2 class="major">#Sobre</h2>
+          <h2 class="major" id="about">#Sobre</h2>
         </div>
         <div class="ide">
           <div class="container">
@@ -198,7 +199,7 @@
 
       <section class="contact">
         <div class="container">
-          <h2 class="major">#Contato</h2>
+          <h2 class="major" id="contact">#Contato</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </section>
@@ -210,7 +211,6 @@
       </div>
     </footer>
 
-    <script src="runCode.js"></script>
     <script src="main.js"></script>
 
   </body>
