@@ -160,7 +160,7 @@ window.addEventListener("keyup", function(event) {
    hamburger.classList.toggle("is-active");
    // Do something else, like open/close menu
    if (widthScreen <= 1024) {
-     widthX = '90vw';
+     widthX = '80vw';
      left = '0';
      right = 'auto';
    }else {

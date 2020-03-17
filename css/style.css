@@ -375,8 +375,29 @@ opacity: 0;
 
 /* --------------------------- */
 /*media*/
-@media screen and (max-width: 815px) {
-  h2.major{
+@media screen and (max-width: 450px) {
+  h2.major, h1{
+    font-size: 2rem;
+  }
+
+  div.menu{
+    margin-right: -1rem;
+  }
+
+  #change, .beforeRun #code2{
+    font-size: inherit;
+  }
+
+  .sobre code{
+    font-size: 1.2rem;
+  }
+
+  img.grid{
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .major{
     font-size: 4rem;
   }
   .container.gridCont{
@@ -386,7 +407,7 @@ opacity: 0;
   .menu{
     margin-right: -3rem;
   }
-  .grid.txt {
+  .grid.txt, h1 {
     text-align: center;
   }
 }
