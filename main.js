@@ -142,3 +142,35 @@ window.addEventListener("keyup", function(event) {
    input.click();
   }
 });
+
+
+//vendor js
+// Look for .hamburger
+ let hamburger = document.querySelector(".hamburger"),
+ navBar = document.getElementById('navBar'),
+ nav = document.getElementById('nav'),
+ widthScreen = window.screen.width,
+ widthX, calc;
+
+
+
+ // On click
+ hamburger.addEventListener("click", function() {
+   // Toggle class "is-active"
+   hamburger.classList.toggle("is-active");
+   // Do something else, like open/close menu
+   if (widthScreen <= 1024) {
+     widthX = '90vw';
+   }else {
+     widthX = '20vw';
+     calc = 'calc(100vw - '+widthX+')';
+   }
+  if (nav.style.width == widthX) {
+    navBar.style.width = '100vw';
+    nav.style.width = '0';
+  }else {
+    navBar.style.width = calc;
+    nav.style.width = widthX;
+  }
+
+ });

@@ -9,6 +9,7 @@
 
     <!-- css vendors -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="./css/vendor/hamburgers.css" rel="stylesheet" type="text/css">
 
   </head>
 
@@ -40,10 +41,23 @@
 
     <!-- <div class="background"></div> -->
 
-    <nav>
+    <div class="nav" id="navBar">
       <div class="container">
         <div class="logo">mage.portfolio</div>
-        <div class="menu major">
+        <div class="menu">
+
+          <button class="hamburger hamburger--emphatic" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav id="nav">
+      <div class="container">
+        <div class="menuPanel">
           <ul>
             <li>Início</li>
             <li>Projetos</li>
@@ -185,7 +199,7 @@
                 <br>
                 <span class="magenta">let</span>
                 conhecimentos = [
-                &nbsp;<span class="grass">'HTML5'</span>,
+                <span class="grass">'HTML5'</span>,
                 &nbsp;<span class="grass">'CSS3'</span>,
                 &nbsp;<span class="grass">'JS'</span>,
                 &nbsp;<span class="grass">'Git/GitHub'</span>
