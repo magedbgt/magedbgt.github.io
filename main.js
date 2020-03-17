@@ -150,7 +150,7 @@ window.addEventListener("keyup", function(event) {
  navBar = document.getElementById('navBar'),
  nav = document.getElementById('nav'),
  widthScreen = window.screen.width,
- widthX, calc;
+ widthX, calc, left, right;
 
 
 
@@ -161,16 +161,24 @@ window.addEventListener("keyup", function(event) {
    // Do something else, like open/close menu
    if (widthScreen <= 1024) {
      widthX = '90vw';
+     left = '0';
+     right = 'auto';
    }else {
      widthX = '20vw';
      calc = 'calc(100vw - '+widthX+')';
+     left = 'auto';
+     right = '0';
    }
   if (nav.style.width == widthX) {
     navBar.style.width = '100vw';
     nav.style.width = '0';
+    nav.style.left = left;
+    nav.style.right = right;
   }else {
     navBar.style.width = calc;
     nav.style.width = widthX;
+    nav.style.left = left;
+    nav.style.right = right;
   }
 
  });
