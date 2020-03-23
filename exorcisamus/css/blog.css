@@ -133,11 +133,7 @@ html {
     margin: 1rem 0 1rem;
   }
 
-  p{
-    font-size: 1.5rem;
-  }
-
-  li{
+  li, p{
     font-size: 1.3rem;
   }
 
