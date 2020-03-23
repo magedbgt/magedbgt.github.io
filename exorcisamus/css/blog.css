@@ -1,4 +1,4 @@
-a/*global*/
+/*global*/
 :root{
   --pink: #ef4f5c;
   --pale-pink: #FFDFD6;
@@ -34,7 +34,7 @@ html {
     background: #f1f1f1;
   }
 
-  ::-webkit-scrollbar-thumb, .sidenav, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover,.blog-pager-older-link:hover, .blog-pager-newer-link:hover, a:hover, .ubiA:hover{
+  ::-webkit-scrollbar-thumb, .sidenav, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover,.blog-pager-older-link:hover, .blog-pager-newer-link:hover, .p-a:hover, .ubiA:hover{
     background: rgb(239,79,92);
     background: linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef4f5c",endColorstr="#f27f59",GradientType=1);
@@ -219,16 +219,16 @@ html {
     background: #ebebe4;
   }
 
-  .questions b, .overlay .closebtn:hover,.menu, .ubiA, a, #topoBtn, .nav-build a:hover li, input[type=button], .jump-link a, a.home-link, .blog-pager-older-link, .blog-pager-newer-link{
+  /* .questions b, .overlay .closebtn:hover,.menu, .ubiA, .p-a, #topoBtn, .nav-build a:hover li, input[type=button], .jump-link a, a.home-link, .blog-pager-older-link, .blog-pager-newer-link{
     color: var(--pink);
-  }
+  } */
 
-  .menu.white-menu, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover, .blog-pager-older-link:hover, .blog-pager-newer-link:hover, .ubiA:hover, a.buildA, .abimg header, .sidenav a:hover, .p-a:hover,
+  /* .menu.white-menu, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover, .blog-pager-older-link:hover, .blog-pager-newer-link:hover, .ubiA:hover, a.buildA, .abimg header, .sidenav a:hover, .p-a:hover,
   .sidenav button:hover,
   .buildsPageCond p,
   .build-small{
     color: white;
-  }
+  } */
 
   /* ====================== */
 
@@ -417,57 +417,22 @@ html {
   .sidenav a {
     padding: 1% 5% 1% 5%;
     display: block;
-  }
-
-   .sidenav a, #mySidenav input, #mySidenav input::-webkit-input-placeholder{
-     color: var(--pale-pink);
-     text-align: center;
-   }
-
-   .sidenav a, #mySidenav input, #mySidenav input::-moz-placeholder{
-     color: var(--pale-pink);
-     text-align: center;
-   }
-
-   .sidenav a, #mySidenav input, #mySidenav input:-ms-input-placeholder{
-     color: var(--pale-pink);
-     text-align: center;
-   }
-
-   .sidenav a, #mySidenav input, #mySidenav input::-ms-input-placeholder{
-     color: var(--pale-pink);
-     text-align: center;
-   }
-
-   .sidenav a, #mySidenav input, #mySidenav input::placeholder{
-     color: var(--pale-pink);
-     text-align: center;
-   }
-
-    #mySidenav input::-webkit-input-placeholder{
-      opacity: .5;
-    }
-
-    #mySidenav input::-moz-placeholder{
-      opacity: .5;
-    }
-
-    #mySidenav input:-ms-input-placeholder{
-      opacity: .5;
-    }
-
-    #mySidenav input::-ms-input-placeholder{
-      opacity: .5;
-    }
-
-    #mySidenav input::placeholder{
-      opacity: .5;
-    }
-
-  .navA{
     font-size: 2.2rem;
     width: 80%;
   }
+
+   .sidenav a, #mySidenav input::placeholder, #mySidenav input::-webkit-input-placeholder,
+   #mySidenav input::-moz-placeholder, #mySidenav input:-ms-input-placeholder,
+   #mySidenav input::-ms-input-placeholder{
+     color: var(--pale-pink);
+     text-align: center;
+   }
+
+    #mySidenav input::placeholder, #mySidenav input::-webkit-input-placeholder,
+    #mySidenav input::-moz-placeholder, #mySidenav input:-ms-input-placeholder,
+    #mySidenav input::-ms-input-placeholder{
+      opacity: .5;
+    }
 
   .navB{
     display: none!important;
@@ -506,10 +471,10 @@ html {
   /*=======================*/
 
   /*build nav*/
-  ul.nav-build, .nav-build li{
+  /* ul.nav-build, .nav-build li{
     display: inline-block;
     list-style: none;
-  }
+  } */
 
   .navguia{
     position: -webkit-sticky;
