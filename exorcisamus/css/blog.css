@@ -846,6 +846,11 @@ html {
     display: none;
   }
 
+  .date-outer {
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
+  }  
+
   #alpacaimg{
       margin: auto;
       padding: 10px 0 10px;
