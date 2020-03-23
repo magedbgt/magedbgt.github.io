@@ -144,6 +144,10 @@ html {
     font-size: 1.3rem;
   }
 
+  .widget .post-body li{
+    margin-bottom: 1rem!important;
+  }
+
   small{
     font-size: 1rem;
   }
