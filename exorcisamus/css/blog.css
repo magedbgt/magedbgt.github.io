@@ -254,6 +254,10 @@ html {
     color: white;
   }
 
+  h3.post-title a:hover{
+    background: transparent!important;
+  }
+
   /* ====================== */
 
   /*topobtn*/
