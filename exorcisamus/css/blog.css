@@ -515,10 +515,10 @@ html {
   /*=======================*/
 
   /*build nav*/
-  /* ul.nav-build, .nav-build li{
+  ul.nav-build, .nav-build li{
     display: inline-block;
     list-style: none;
-  } */
+  }
 
   .navguia{
     position: -webkit-sticky;
