@@ -247,7 +247,8 @@ html {
   .white,
   .buildA,
   .sidenav a:hover,
-  .sidenav input{
+  .sidenav input,
+  input[type=button]:hover{
     color: white;
   }
 
@@ -581,7 +582,7 @@ html {
     text-align: center;
   }
 
-  .nav-build a:hover li{
+  .nav-build a:hover li, .checkP:hover{
     background: white;
     -webkit-box-shadow: 5px 5px 5px #d0d0d0;
             box-shadow: 5px 5px 5px #d0d0d0;
