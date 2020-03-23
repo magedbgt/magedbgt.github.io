@@ -115,7 +115,7 @@ html {
     font-weight: normal;
   }
 
-  .nome, header, h2.build-title, header h2{
+  .nome, header, h2.build-title, header h2, h3.post-title{
     font-family: "Sacramento", cursive;
   }
 
@@ -219,9 +219,6 @@ html {
     background: #ebebe4;
   }
 
-  /* .questions b, .overlay .closebtn:hover,.menu, .ubiA, .p-a, #topoBtn, .nav-build a:hover li, input[type=button], .jump-link a, a.home-link, .blog-pager-older-link, .blog-pager-newer-link{
-    color: var(--pink);
-  } */
 
   a,
   .menu,
@@ -231,13 +228,6 @@ html {
   {
     color: var(--pink);
   }
-
-  /* .menu.white-menu, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover, .blog-pager-older-link:hover, .blog-pager-newer-link:hover, .ubiA:hover, a.buildA, .abimg header, .sidenav a:hover, .p-a:hover,
-  .sidenav button:hover,
-  .buildsPageCond p,
-  .build-small{
-    color: white;
-  } */
 
   header,
   h1,
@@ -1294,11 +1284,11 @@ html {
 
     #hMob{
       display: block;
-      color: black;
     }
 
     #hMob h1{
       border-bottom: 1px black solid;
+      color: black;
     }
 
     #hMob h2 {
