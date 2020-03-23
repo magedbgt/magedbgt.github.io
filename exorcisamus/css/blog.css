@@ -223,12 +223,27 @@ html {
     color: var(--pink);
   } */
 
+  a,
+  .menu,
+  .nav-build a:hover,
+  h3.post-title a:hover
+  {
+    color: var(--pink);
+  }
+
   /* .menu.white-menu, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover, .blog-pager-older-link:hover, .blog-pager-newer-link:hover, .ubiA:hover, a.buildA, .abimg header, .sidenav a:hover, .p-a:hover,
   .sidenav button:hover,
   .buildsPageCond p,
   .build-small{
     color: white;
   } */
+
+  h1,
+  .nav-build a,
+  a:hover,
+  .menu.white-menu{
+    color: white;
+  }
 
   /* ====================== */
 
@@ -361,6 +376,7 @@ html {
     border: none;
     font-family: inherit;
     background: none;
+    text-align: center;
   }
 
   /*sidenav*/
