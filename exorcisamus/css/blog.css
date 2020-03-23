@@ -902,7 +902,7 @@ html {
     cursor: pointer;
   }
 
-  #calculadora p, #checkP{
+  #calculadora p, .checkP{
     margin: 1rem 0 0;
     font-size: 1.3rem;
   }
