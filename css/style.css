@@ -133,7 +133,7 @@ a{
   text-decoration: none;
 }
 
-main, header{
+main, header, input, *::placeholder, textarea{
   color: #fff;
 }
 header, section{
@@ -257,7 +257,10 @@ img.scroll {
 h2.major {
     font-size: 6rem;
     font-weight: bold;
-    opacity: .5;
+}
+
+h2.major, *::placeholder{
+  opacity: .5;
 }
 
 .container.gridCont {
@@ -293,6 +296,30 @@ img.grid {
   padding: 2rem 0;
 }
 
+input, *::placeholder, form span {
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+input, textarea{
+  background: transparent;
+  padding: .5rem;
+}
+
+input[type=submit]{
+  border: none;
+}
+
+input[type=email], input[type=text], textarea{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px white solid;
+}
+
+textarea{
+  resize: none;
+}
 /* ------------------------- */
 /*PROMPT inicial*/
 #runCode{

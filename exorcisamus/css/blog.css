@@ -70,7 +70,7 @@ html {
   #posts{
     padding-top: 6rem;
     position: relative;
-    width: 70%;
+    width: 78%;
     padding-left: 1rem;
     text-align: justify;
   }
@@ -517,7 +517,7 @@ html {
   }
 
   #nav-home, #navguia{
-    width: 28%;
+    width: 20%;
     float: right;
   }
 
