@@ -278,9 +278,9 @@ html {
   }
 
   div.abimg2{
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/photo%20-%20Copy.png);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/photo%20-%20Copy.png);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/photo%20-%20Copy.png);
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/photo.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(https://magedbgt.github.io/exorcisamus/img/photo.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://magedbgt.github.io/exorcisamus/img/photo.png);
   }
 
   div.abimg3{
