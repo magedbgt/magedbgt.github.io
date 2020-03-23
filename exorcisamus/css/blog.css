@@ -13,11 +13,11 @@ html {
   box-sizing: inherit;
   }
 
-  *, *:hover, *:disabled, *:focus{
+  /* *, *:hover, *:disabled, *:focus{
     -webkit-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-  }
+  } */
 
   *:focus{
     outline: none;
@@ -583,9 +583,9 @@ html {
     background: white;
     -webkit-box-shadow: 5px 5px 5px #d0d0d0;
             box-shadow: 5px 5px 5px #d0d0d0;
-    -webkit-transition: .5s;
+    /* -webkit-transition: .5s;
     -o-transition: .5s;
-    transition: .5s;
+    transition: .5s; */
   }
 
   /*=======================*/
