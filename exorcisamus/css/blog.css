@@ -51,6 +51,7 @@ html {
     line-height: 1.5;
     scroll-behavior: smooth;
     -webkit-print-color-adjust: exact;
+    font-family: "Raleway", sans-serif;
   }
 
   header{
@@ -112,6 +113,14 @@ html {
   h1{
     font-size: 3rem;
     font-weight: normal;
+  }
+
+  .nome, header, h2.build-title{
+    font-family: "Sacramento", cursive;
+  }
+
+  h2, h3, h4, h5, h6{
+    font-family: 'Sen', sans-serif;
   }
 
   h2{
