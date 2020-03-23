@@ -1299,7 +1299,6 @@ html {
 
     #hMob h1{
       border-bottom: 1px black solid;
-      color: black;
     }
 
     #hMob h2 {
@@ -1310,6 +1309,10 @@ html {
       margin: 3.5rem 0 .5rem;
       display: none;
     }
+
+  #hMob h1, #hMob h2{
+    color: black;
+  }
 
     footer{
       background-size: cover;
