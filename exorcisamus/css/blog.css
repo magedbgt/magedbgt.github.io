@@ -437,18 +437,23 @@ html {
     width: 80%;
   }
 
-   .sidenav a, #mySidenav input::placeholder, #mySidenav input::-webkit-input-placeholder,
-   #mySidenav input::-moz-placeholder, #mySidenav input:-ms-input-placeholder,
-   #mySidenav input::-ms-input-placeholder{
-     color: var(--pale-pink);
-     text-align: center;
+  .sidenav a,
+  #mySidenav input::placeholder,
+  #mySidenav input::-webkit-input-placeholder,
+  #mySidenav input::-moz-placeholder,
+  #mySidenav input:-ms-input-placeholder,
+  #mySidenav input::-ms-input-placeholder{
+   color: var(--pale-pink);
+   text-align: center;
    }
 
-    #mySidenav input::placeholder, #mySidenav input::-webkit-input-placeholder,
-    #mySidenav input::-moz-placeholder, #mySidenav input:-ms-input-placeholder,
-    #mySidenav input::-ms-input-placeholder{
-      opacity: .5;
-    }
+  #mySidenav input::placeholder,
+  #mySidenav input::-webkit-input-placeholder,
+  #mySidenav input::-moz-placeholder, 
+  #mySidenav input:-ms-input-placeholder,
+  #mySidenav input::-ms-input-placeholder{
+    opacity: .5;
+  }
 
   .navB{
     display: none!important;
