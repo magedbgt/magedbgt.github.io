@@ -34,7 +34,7 @@ html {
     background: #f1f1f1;
   }
 
-  ::-webkit-scrollbar-thumb, .sidenav, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover,.blog-pager-older-link:hover, .blog-pager-newer-link:hover, .p-a:hover, a:hover, .ubiA:hover{
+  ::-webkit-scrollbar-thumb, .sidenav, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover,.blog-pager-older-link:hover, .blog-pager-newer-link:hover, .p-a:hover, #posts a:hover, .ubiA:hover{
     background: rgb(239,79,92);
     background: linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef4f5c",endColorstr="#f27f59",GradientType=1);
