@@ -115,7 +115,7 @@ html {
     font-weight: normal;
   }
 
-  .nome, header, h2.build-title, header h2, h3.post-title{
+  .nome, header, h2.build-title, header h2{
     font-family: "Sacramento", cursive;
   }
 
