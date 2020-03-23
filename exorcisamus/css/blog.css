@@ -238,10 +238,13 @@ html {
     color: white;
   } */
 
+  header,
   h1,
   .nav-build a,
   a:hover,
-  .menu.white-menu{
+  .menu.white-menu,
+  .white,
+  .buildA{
     color: white;
   }
 
