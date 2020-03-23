@@ -248,7 +248,8 @@ html {
   .buildA,
   .sidenav a:hover,
   .sidenav input,
-  input[type=button]:hover{
+  input[type=button]:hover,
+  button{
     color: white;
   }
 
