@@ -244,7 +244,9 @@ html {
   a:hover,
   .menu.white-menu,
   .white,
-  .buildA{
+  .buildA,
+  .sidenav a:hover,
+  .sidenav input{
     color: white;
   }
 
