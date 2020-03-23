@@ -226,7 +226,8 @@ html {
   a,
   .menu,
   .nav-build a:hover,
-  h3.post-title a:hover
+  h3.post-title a:hover,
+  input[type=button]
   {
     color: var(--pink);
   }
