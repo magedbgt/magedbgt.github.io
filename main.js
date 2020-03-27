@@ -22,7 +22,8 @@ function typeWriter() {
 class TextScramble {
   constructor(el) {
     this.el = el
-    this.chars = '!<>-_\\/[]{}—=+*^?#________'
+    //this.chars = '!<>-_\\/[]{}—=+*^?#________'
+    this.chars = '01'
     this.update = this.update.bind(this)
   }
   setText(newText) {
@@ -98,32 +99,54 @@ contact_ = new TextScramble(contact),
 elEvent = [atividade_, work_, about_, contact_];
 
 const sections = [
-  ['criar', 'desenhar', 'observar', 'desenvolver', 'estudar'],
-  ['#Projetos', '#Projetos', '#Projetos', '#Projetos', '#Projetos'],
-  ['#Sobre', '#Sobre', '#Sobre', '#Sobre', '#Sobre'],
-  ['#Contato', '#Contato', '#Contato', '#Contato', '#Contato']
-];
+                    ['criar', 'desenhar', 'observar', 'desenvolver', 'estudar'],
+                    ['#Projetos', '#Projetos', '#Projetos', '#Projetos', '#Projetos'],
+                    ['#Sobre', '#Sobre', '#Sobre', '#Sobre', '#Sobre'],
+                    ['#Contato', '#Contato', '#Contato', '#Contato', '#Contato']
+                  ];
 
-
+//showcase
+let showcase = document.getElementsByClassName('showcase'),
+showcaseHash = document.getElementById('showcaseHash'),
+showcaseImg = document.getElementById('showcaseImg'),
+showcaseSrc = ["img/ba.png",
+                "img/exorcisamus.png",
+                "img/gefro.png",
+                "img/mvt.png"
+              ],
+showcaseHashtags = ["#2019 #blogger #HTML5 #CSS3 #JS #GitHub",
+                    "#2019 #blogger #HTML5 #CSS3 #JS #GitHub",
+                    "#2019 #GitHub #HTML5 #CSS3 #JS",
+                    "#2019 #GitHub #HTML5 #CSS3 #JS #PWA"
+                  ];
+function changeSrc(el) {
+  let counter = el.name;
+  showcaseHash.innerHTML = showcaseHashtags[counter];
+  showcaseImg.src = showcaseSrc[counter];
+  console.log(counter);
+}
 
 
 //PROMPT code
-
 function ranCode(el){
   let beforeRun = document.getElementsByClassName('beforeRun'), a = 0,
   ell = el.parentNode.parentNode, ele = el.nextElementSibling;
   el.classList.add('ranCode');
   ele.classList.add('ranCode');
+
   function loaded(el){
     el.classList.add('clipPath');
+
     function clip(el){
       for (let i = 0; i < beforeRun.length; i++) {
         beforeRun[i].classList.remove('beforeRun');
       }
       el.addEventListener('transitionend', function(){el.remove();},false);
     }
+
     el.addEventListener('transitionend',function (){clip(ell)},false);
   }
+
   ele.addEventListener('transitionend',function (){loaded(ell)},false);
   for (let t = 0; t < sections.length; t++) {
     ele.addEventListener('transitionend', function(){
@@ -133,8 +156,16 @@ function ranCode(el){
     }, false);
   }
   ele.addEventListener('transitionend', function(){setTimeout(typeWriter, 2000);}, false);
+  ele.addEventListener('transitionend', function(){
+    for (let t = 0; t < showcase.length; t++) {
+      showcase[t].addEventListener('mouseover',function() {changeSrc(this);}, false );
+      showcase[t].addEventListener('touchstart',function() {changeSrc(this);}, false );
+      showcase[t].name = t;
+    }
+  }, false);
 
 }
+
 let input = document.getElementById("runCode");
 window.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
@@ -182,3 +213,7 @@ window.addEventListener("keyup", function(event) {
   }
 
  });
+
+
+//vendor - rellax js
+let rellax = new Rellax('.rellax');
