@@ -530,7 +530,7 @@ html {
     color: var(--pink);
     cursor: pointer;
     padding: 1rem;
-    width: 100%;
+    width: 80%;
     border: none;
     text-align: center;
     outline: 1px solid var(--pink);
