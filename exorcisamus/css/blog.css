@@ -1401,10 +1401,16 @@ html {
     background-size: initial;
     background-position: center;
     }
+    h1{
+      color: black;
+    }
   }
 
   /* ipad 1024 */
   @media only screen and (min-width: 1024px) and (orientation: portrait) {
+    h1{
+      color: black;
+    }
     .canvasP{
       height: 55vh;
     }
