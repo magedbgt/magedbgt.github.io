@@ -533,13 +533,14 @@ html {
     width: 100%;
     border: none;
     text-align: center;
-    outline: none;
+    outline: 1px solid var(--pink);
+    outline-offset: -.5rem;
     font-size: inherit;
   }
 
-  .active, .collapsible:hover {
+  /* .active, .collapsible:hover {
     background-color: #e7e7e7;
-  }
+  } */
 
   .active i{
     transform: rotate(45deg);
@@ -1441,7 +1442,7 @@ html {
     .onlyMobile{
       display: block;
     }
-    
+
     h1{
       color: black;
     }
