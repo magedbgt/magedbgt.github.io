@@ -547,10 +547,18 @@ html {
   }
 
   .conteudo {
-    padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+  }
+
+  .conteudo ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .conteudo li {
+    padding: .5rem 0;
+    border-bottom: 1px var(--pink) solid;
   }
 
   ul.nav-build, .nav-build li{
