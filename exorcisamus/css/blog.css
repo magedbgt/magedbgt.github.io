@@ -1044,8 +1044,7 @@ html {
       width: 100%;
     }
 
-    input[type=button], #blog-pager-newer-link, #blog-pager-older-link,
-    a.home-link, .blog-pager-newer-link{
+    input[type=button]{
       background: rgb(239,79,92)!important;
       background: -o-linear-gradient(322deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
       background: linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
