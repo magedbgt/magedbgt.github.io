@@ -526,19 +526,23 @@ html {
 
   /*build nav*/
   .collapsible {
-    background-color: #777;
-    color: white;
+    background-color: white;
+    color: var(--pink);
     cursor: pointer;
-    padding: 18px;
+    padding: 1rem;
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: center;
     outline: none;
-    font-size: 15px;
+    font-size: inherit;
   }
 
   .active, .collapsible:hover {
-    background-color: #555;
+    background-color: #e7e7e7;
+  }
+
+  .active i{
+    transform: rotate(45deg);
   }
 
   .conteudo {
