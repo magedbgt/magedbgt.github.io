@@ -969,12 +969,12 @@ html {
 
     /*blogger*/
 
-    .jump-link a, a.home-link,
+    /* .jump-link a, a.home-link,
     .blog-pager-older-link,
     .blog-pager-newer-link{
       background: #f7f7f7;
       padding: 5px;
-    }
+    } */
 
     .post-title a{
       color: #000;
