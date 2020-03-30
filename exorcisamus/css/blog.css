@@ -56,7 +56,7 @@ html {
 
   header{
     text-align: center;
-    padding-top: 50vh;
+    padding-top: 40vh;
   }
 
   .abimg header div.container > * {
@@ -126,30 +126,29 @@ html {
     font-weight: 100;
   }
 
-  h2, h3, h4, h5, h6{
+  h2, h3, h4, h5, h6, h2 small{
     font-family: 'Sen', sans-serif;
   }
 
-  h2{
+  h2, h3{
     text-align: center;
   }
 
   h3{
-    text-align: center;
     font-size: 1.5rem;
     margin: 1rem 0 1rem;
   }
 
-  li, p{
+  small{
+    font-size: 1rem;
+  }
+
+  li, p, h2 small{
     font-size: 1.3rem;
   }
 
   .widget .post-body li{
     margin-bottom: 1rem!important;
-  }
-
-  small{
-    font-size: 1rem;
   }
 
   ul{
@@ -996,10 +995,6 @@ html {
     h2.date-header{
       font-size: 1.1rem;
       margin-top: 50px;
-    }
-
-    h2 small{
-      font-size: 2rem;
     }
 
     .jump-link{
