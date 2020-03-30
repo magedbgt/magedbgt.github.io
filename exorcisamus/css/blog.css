@@ -34,7 +34,7 @@ html {
     background: #f1f1f1;
   }
 
-  ::-webkit-scrollbar-thumb, .sidenav, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover,.blog-pager-older-link:hover, .blog-pager-newer-link:hover, .p-a:hover, #posts a:hover, .ubiA:hover{
+  ::-webkit-scrollbar-thumb, .sidenav, .nav-build li, input[type=button]:hover, #buttonCalc, .charLvlTxt, .charMatkTxt, .wpnDmgTxt, .mystAmpTxt, .jump-link a:hover, a.home-link:hover, .p-a:hover, #posts a:hover, .ubiA:hover{
     background: rgb(239,79,92);
     background: linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef4f5c",endColorstr="#f27f59",GradientType=1);
@@ -1368,10 +1368,10 @@ html {
       padding: auto 3rem;
 
     }
-    .blog-pager-newer-link, .blog-pager-older-link{
+    /* .blog-pager-newer-link, .blog-pager-older-link{
       color: #fff!important;
       padding: 3px 15px;
-    }
+    } */
 
     h3.post-title{
       margin-top: 2rem;
@@ -1414,8 +1414,7 @@ html {
       width: 100%;
     }
 
-    a.ubiA, input[type=button], #blog-pager-newer-link, #blog-pager-older-link,
-    a.home-link, .blog-pager-newer-link{
+    a.ubiA, input[type=button]{
       background: rgb(239,79,92)!important;
       background: -o-linear-gradient(322deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
       background: linear-gradient(128deg, rgba(239,79,92,1) 31%, rgba(241,113,90,1) 78%, rgba(242,127,89,1) 100%)!important;
@@ -1696,11 +1695,11 @@ html {
 
     /*blogger media query*/
 
-    #blog-pager-newer-link,
+    /* #blog-pager-newer-link,
     #blog-pager-older-link, a.home-link{
       color: #fff!important;
       width: 100%!important;
-    }
+    } */
 
     #blog-pager-newer-link,
     #blog-pager-older-link{
@@ -1730,10 +1729,6 @@ html {
       text-align: center;
       padding: auto 3rem;
 
-    }
-    .blog-pager-newer-link, .blog-pager-older-link{
-      color: #fff!important;
-      padding: 3px 15px;
     }
 
     h3.post-title{
