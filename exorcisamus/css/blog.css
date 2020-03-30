@@ -217,10 +217,10 @@ html {
   }
 
   .ubiA{
-    font-weight: bold;
-    padding: .36667rem .36667rem 0;
-    vertical-align: middle;
-    background-color: #f7f7f7;
+    /* font-weight: bold; */
+    /* padding: .36667rem .36667rem 0; */
+    /* vertical-align: middle; */
+    /* background-color: #f7f7f7; */
   }
 
   input:disabled, select:disabled{
