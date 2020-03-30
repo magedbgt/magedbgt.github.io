@@ -1037,6 +1037,10 @@ html {
   }
 
   @media only screen and (max-width: 835px) {
+    .container{
+      width: 90%;
+    }
+
     .canvasP{
       height: 55vh;
     }

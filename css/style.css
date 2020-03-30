@@ -4,13 +4,17 @@
   /*main*/
   --cream: #ffeecc;
   --papaya: #fc605e;
-  --grass: #90c86c;
-  --darkblue: #0b032d;
+  --grass: #96db6b;
+  /* --darkblue: #0b032d; */
+  --darkblue: #050118;
   /*details*/
   --magenta: #FD5BE9;
   --sky: #0BAFFF;
   --blueberry: #504176;
   --banana: #ecc743;
+  --lilac: #7e65bc;
+  --grafitte: #45454d;
+
 
   /*não usadas ou trocadas*/
   --strawberry: #fabbc5;
@@ -19,13 +23,18 @@
   --vanilla: #fff1e9;
   --milkshake: #ffd5d5;
   --malibu: #fc7fb2;
-  --grafitte: #45454d;
   --sakura: #ffbbcc;
   --cherryblossom: #ffcccc;
   --peach: #ffddcc;
   --navy: #407088;
   --oldnavy: #132743;
-  --lilac: #7e65bc;
+}
+
+.cream{
+  color: var(--cream);
+}
+.grafitte{
+  color: var(--grafitte);
 }
 
 .blueberry{
@@ -54,7 +63,7 @@
   color: var(--sky);
 }
 
-.banana{
+.banana , .showcase .active{
   color: var(--banana);
 }
 /* --------------------- */
@@ -77,6 +86,7 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -208,6 +218,11 @@ nav, nav .container, nav .menuPanel{
 
 nav li{
   margin-left: 10px;
+  font-size: 2rem;
+}
+
+nav li:hover code{
+  font-weight: bold;
 }
 
 .logo{
@@ -221,14 +236,6 @@ nav li{
   font-weight: bold;
   margin: 1rem -4rem 0 0;
 }
-/* .menu li{
-  opacity: .5;
-  transition: .5s;
-}
-.menu li:hover{
-  opacity: 1;
-  cursor: pointer;
-} */
 
 #bckgVideo {
   position: fixed;
@@ -268,8 +275,8 @@ h2.major, *::placeholder{
 
 .grid img {
     width: 40rem;
-    /* height: 25rem; */
 }
+
 .grid p {
     text-align: center;
 }
@@ -278,6 +285,28 @@ h2.major, *::placeholder{
     display: -ms-inline-grid;
     display: inline-grid;
     margin: 2rem 0;
+}
+
+.showcase{
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+}
+
+.showcase a::after{
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-radius: 20px;
+  background: var(--cream);
+  transition: .5s all ease;
+}
+.showcase a:hover::after{
+  left: 0;
+  width: 100%;
 }
 
 .work code{
@@ -289,18 +318,30 @@ h2.major, *::placeholder{
 }
 
 .ide{
-  background: linear-gradient(rgba(11, 13, 45, .4), rgba(11, 13, 45, .9) , rgba(11, 13, 45, .4));
+  background: linear-gradient(rgba(5, 1, 24, .1), rgba(5, 1, 24, .5), rgba(5, 1, 24, 0.9) , rgba(5, 1, 24, .5), rgba(5, 1, 24, .1));
   padding: 2rem 0;
+}
+
+input#command {
+  font-size: inherit;
+  padding: 0;
+  width: 12rem;
 }
 
 input, *::placeholder, form span {
     font-family: monospace;
-    font-size: 1rem;
+    font-size: inherit;
+
 }
 
 input, textarea{
   background: transparent;
   padding: .5rem;
+}
+
+input, *::placeholder, textarea{
+  caret-color: orange;
+  text-align: center;
 }
 
 input[type=submit]{

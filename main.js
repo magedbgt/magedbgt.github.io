@@ -123,7 +123,10 @@ function changeSrc(el) {
   let counter = el.name;
   showcaseHash.innerHTML = showcaseHashtags[counter];
   showcaseImg.src = showcaseSrc[counter];
-  console.log(counter);
+  for (let t = 0; t < showcase.length; t++) {
+    showcase[t].firstElementChild.classList.remove('active');
+  }
+  el.firstElementChild.classList.add('active');
 }
 
 
@@ -163,14 +166,22 @@ function ranCode(el){
       showcase[t].name = t;
     }
   }, false);
+  ele.addEventListener('transitionend', function(){
+    command.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+       event.preventDefault();
+       revealAtCommand();
+      }
+    });
+  }, false);
 
 }
 
-let input = document.getElementById("runCode");
+let runCode = document.getElementById("runCode");
 window.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
    event.preventDefault();
-   input.click();
+   runCode.click();
   }
 });
 
@@ -216,4 +227,51 @@ window.addEventListener("keyup", function(event) {
 
 
 //vendor - rellax js
-let rellax = new Rellax('.rellax');
+
+if (widthScreen > 1024) {
+  let rellax = new Rellax('.rellax');
+}
+//Sobre
+let personal = [
+                  'Nome: Maria Eugênia Deungaro Borgato',
+                  'Data de Nascimento: 12/08/1994',
+                  'Hobbies: Desenhar, Jogar, Estudar e Desenvolver'
+                ];
+
+let educacao = [
+                  'Faculdade de Tecnologia de Jahu - FATEC JAHU • Sistemas para Internet • Tecnologia • 2020-Presente',
+                  'Universidade de São Paulo - ESALQ/USP • Engenharia Agronômica • Bacharelado • 2012-2019',
+                  'Ohio State University - OSU Columbus • Estudos agrários • Graduação Sanduíche • 2015-2016',
+                  'Idiomas: Inglês Fluente • Espanhol Intermediário'
+                ];
+let conhecimentos = [ 'HTML5',  'CSS3',  'JS',  'Git/GitHub', 'PWA' ];
+
+class Mage{
+  static reveal(about){
+    return about.join('<br><br>');
+  }
+}
+
+
+function revealAtCommand() {
+  let command = document.getElementById('command'),
+  output = document.getElementById('output'),
+  value = command.value;
+
+  if (value == 'dadosPessoais') {
+    output.innerHTML = Mage.reveal(personal);
+  }else if (value == 'educacao') {
+    output.innerHTML = Mage.reveal(educacao);
+  }else if (value == 'conhecimentos') {
+    output.innerHTML = Mage.reveal(conhecimentos);
+  }else if (value == '') {
+    output.innerHTML = "<span class='papaya'>"+'Uncaught TypeError: Cannot read property \'join\' of undefined at '+'Function.reveal</span>';
+  }else {
+    if (value.includes(' ')) {
+      output.innerHTML = "<span class='papaya'>Uncaught SyntaxError: missing ) after argument list</span>";
+    }else {
+      output.innerHTML = "<span class='papaya'>Uncaught ReferenceError: "+value+" is not defined</span>";
+    }
+  }
+
+}

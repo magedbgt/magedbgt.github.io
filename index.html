@@ -59,10 +59,26 @@
       <div class="container">
         <div class="menuPanel">
           <ul>
-            <li>Início</li>
-            <li>Projetos</li>
-            <li>Sobre</li>
-            <li>Contato</li>
+            <li>
+              <code>
+                <a href="#">início</a>( );
+              </code>
+              </li>
+            <li>
+              <code>
+                <a href="#work">projetos</a>( )
+              </code>
+              ;</li>
+            <li>
+              <code>
+                <a href="#about">sobre</a>( );
+              </code>
+              </li>
+            <li>
+              <code>
+                <a href="#contact">contato</a>( );
+              </code>
+            </li>
           </ul>
         </div>
       </div>
@@ -89,8 +105,8 @@
           <h2 class="major" id="work">#Trabalhos</h2>
         </div>
 
-        <div class="container gridCont rellax" data-rellax-speed="0">
-          <div class="grid">
+        <div class="container gridCont">
+          <div class="grid rellax" data-rellax-speed="1.7">
             <img id="showcaseImg" src="img/ba.png" alt="">
             <p>
               <code id="showcaseHash">
@@ -126,139 +142,38 @@
 
           </div>
         </div>
-
-        <!-- <div class="container gridCont">
-          <img class="grid" src="img/exorcisamus.png" alt="">
-          <div class="grid txt">
-            <h2>
-              <a href="https://www.exorcisamus.com/">
-                Exorcisamus
-                <i class="fas fa-link"></i>
-              </a>
-            </h2>
-            <p>
-              <code>
-                #2019 #blogger #HTML5 #CSS3 #JS #GitHub
-              </code>
-            </p>
-          </div>
-        </div> -->
-
-        <!-- <div class="container gridCont">
-          <img class="grid" src="img/gefro.png" alt="">
-          <div class="grid txt">
-            <h2>
-              <a href="https://www.gefro.com.br/">
-                GEFRO • Assessoria e Consultoria <br>em Manutenção e Controle de Frotas
-                <i class="fas fa-link"></i>
-              </a>
-            </h2>
-            <p>
-              <code>
-                #2019 #GitHub #HTML5 #CSS3 #JS
-              </code>
-            </p>
-          </div>
-        </div> -->
-
-        <!-- <div class="container gridCont">
-          <img class="grid" src="img/mvt.png" alt="">
-          <div class="grid txt">
-            <h2>
-              <a href="https://mostvaluabletimer.com/">
-                MVT • Most Valuable Timer
-                <i class="fas fa-link"></i>
-              </a>
-            </h2>
-            <p>
-              <code>
-                #2019 #GitHub #HTML5 #CSS3 #JS #PWA
-              </code>
-            </p>
-          </div>
-        </div> -->
-
       </section>
+
       <section class="sobre">
         <div class="container">
           <h2 class="major" id="about">#Sobre</h2>
         </div>
         <div class="ide">
           <div class="container">
-            <p>
               <code>
-                <!-- educacao -->
-                <span class="magenta">let</span>
-                educacao = [<br>
-                &nbsp;{<br>
-                &nbsp;&nbsp;<span class="papaya">escola:</span>
-                <span class="grass">'Universidade de São Paulo - ESALQ/USP'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">curso:</span>
-                <span class="grass">'Engenharia Agronômica'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">tipo:</span>
-                <span class="grass">'Bacharelado'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">ano:</span>
-                <span class="grass">'2012 a 2019'</span>
-                <br>&nbsp;},<br>
-
-                &nbsp;{<br>
-                &nbsp;&nbsp;<span class="papaya">escola:</span>
-                <span class="grass">'Ohio State University - OSU Columbus'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">curso:</span>
-                <span class="grass">'Estudos agrários'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">tipo:</span>
-                <span class="grass">'Graduação Sanduíche'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">ano:</span>
-                <span class="grass">'2015 a 2016'</span>
-                <br>&nbsp;},<br>
-
-                &nbsp;{<br>
-                &nbsp;&nbsp;<span class="papaya">escola:</span>
-                <span class="grass">'Faculdade de Tecnologia de Jahu - FATEC JAHU'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">curso:</span>
-                <span class="grass">'Sistemas para Internet'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">tipo:</span>
-                <span class="grass">'Tecnologia'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">ano:</span>
-                <span class="grass">'2020 a 2023'</span>
-                <br>&nbsp;}
-                <br>];
+                <p>
+                  <span class="cream">
+                    /* <br>
+                    OPÇÕES DE INPUT: <br>
+                    dadosPessoais <br>
+                    educacao <br>
+                    conhecimentos<br>
+                    ENTRE O INPUT E TECLE ENTER <br>
+                    */
+                  </span>
+                </p>
+                <span>
+                  <span class="banana">Mage</span>.<span class="sky">reveal</span>(
+                  <input type="text" id="command" name="" value="">
+                  );
+                </span>
+                <p>
+                  <span class="cream">//Output:</span>
+                </p>
+                <p>
+                  <span id="output" class="grass"></span>
+                </p>
               </code>
-            </p>
-            <p>
-              <code>
-                <!-- skills -->
-                <br>
-                <span class="magenta">let</span>
-                conhecimentos = [
-                <span class="grass">'HTML5'</span>,
-                &nbsp;<span class="grass">'CSS3'</span>,
-                &nbsp;<span class="grass">'JS'</span>,
-                &nbsp;<span class="grass">'Git/GitHub'</span>
-                ];
-              </code>
-            </p>
-            <p>
-              <code>
-                <!-- educacao -->
-                <span class="magenta">let</span>
-                idiomas = [<br>
-                &nbsp;{<br>
-                &nbsp;&nbsp;<span class="papaya">lingua:</span>
-                <span class="grass">'Inglês'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">nivel:</span>
-                <span class="grass">'Fluente'</span>
-                <br>&nbsp;},<br>
-
-                &nbsp;{<br>
-                &nbsp;&nbsp;<span class="papaya">lingua:</span>
-                <span class="grass">'Espanhol'</span>,<br>
-                &nbsp;&nbsp;<span class="papaya">nivel:</span>
-                <span class="grass">'Intermediário'</span>
-                <br>&nbsp;}
-                <br>];
-              </code>
-            </p>
           </div>
         </div>
 
