@@ -1329,14 +1329,15 @@ html {
 
     /*blogger media query*/
 
-    #blog-pager-newer-link,
+    /* #blog-pager-newer-link,
     #blog-pager-older-link, a.home-link{
       color: #fff!important;
       width: 100%!important;
-    }
+    } */
 
     #blog-pager-newer-link,
-    #blog-pager-older-link{
+    #blog-pager-older-link,
+    a.home-link{
       padding: 6px 0;
       margin: 1rem 0 0;
     }
@@ -1702,7 +1703,8 @@ html {
     } */
 
     #blog-pager-newer-link,
-    #blog-pager-older-link{
+    #blog-pager-older-link,
+    a.home-link{
       padding: 6px 0;
       margin: 1rem 0 0;
     }
