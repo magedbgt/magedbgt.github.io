@@ -580,7 +580,7 @@ html {
     padding-top: 6rem;
   }
 
-  #nav-home .contido ul{
+  #nav-home .contido ul, .conteudo .contido ul{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -591,6 +591,10 @@ html {
 
   #nav-home .container{
     width: 90%;
+  }
+
+  .onlyMobile{
+    display: none;
   }
 
   .navguia .contido{
@@ -1169,6 +1173,10 @@ html {
       text-align: center;
     }
 
+    .onlyMobile{
+      display: block;
+    }
+
 
     #nav-home{
       width: 100%;
@@ -1430,6 +1438,10 @@ html {
 
   /* ipad 1024 */
   @media only screen and (min-width: 1024px) and (orientation: portrait) {
+    .onlyMobile{
+      display: block;
+    }
+    
     h1{
       color: black;
     }
