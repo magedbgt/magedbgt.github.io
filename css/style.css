@@ -162,7 +162,10 @@ small a{
 
 main{
   padding-top: 5rem;
-  
+}
+
+main.work_main{
+  padding-top: 0;
 }
 
 main, header, input, *::placeholder, textarea{
@@ -438,12 +441,13 @@ q{
 }
 
 .work{
-  padding-top: 13%;
+  padding-top: 18%;
 }
 
 .sobre code, .work code{
   font-size: 2rem;
 }
+
 
 form, .grid form p{
   text-align: center;
@@ -513,6 +517,25 @@ a#link_projeto:hover {
 
 .work .grid.txt{
   width: 100%;
+}
+
+#imagem_projeto{
+  width: 70%;
+  margin: 0 0 0 auto;
+}
+
+#body_proj{
+  /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(../img/ba-desktop.jpg) no-repeat 0 0/cover var(--darkgrey)!important; */
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
 }
 
 /* ------------------------- */
