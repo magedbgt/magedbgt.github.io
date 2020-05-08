@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="">
   <head>
-    <title>mage.home</title>
+    <title>mage.projetos</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="./css/style.css" rel="stylesheet" type="text/css">
@@ -13,26 +13,8 @@
 
   </head>
 
-  <body class="beforeRun">
+  <body class="">
 
-
-    <div id="prompt">
-      <div class="container" id="code">
-        <code class="comment">
-          <span>
-            //Bem-vindo!<br>
-            //Para continuar, toque / clique em 'run' ou aperte 'enter'<br>
-          </span>
-        </code>
-
-        <code id="code2">
-          <span class="magenta">let</span> me = <span class="papaya">life</span>.<span class="sky">getPersonByName</span>(<span class="grass">'Magê Deungaro'</span>);<br>
-          <span class="papaya">window</span>.<span class="sky">addEventListener</span>('click', <span class="magenta">function</span>(){<span class="sky">revealAbout</span>(me);}, <span class="banana">false</span>);
-      </code>
-      <p id="runCode" onclick="ranCode(this);"><i class="fas fa-play"></i> RUN</p>
-      <p id="ranCode"><code>Loading...</code></p>
-      </div>
-    </div>
 
 
     <div class="nav" id="navBar">
@@ -80,20 +62,53 @@
       </div>
     </nav>
 
-    <header>
-      <div class="container">
-        <h1>
-          <code>
-            Olá, sou a
-            <span class="lilac" id="change">
-              <!-- Maria Eugênia -->
-            </span>
-            e adoro
-            <em id="atividade">desenvolver</em>
-          </code>
-        </h1>
-        <!-- <img src="img/scroll.svg" alt="scroll" class="scroll"> -->
-    </header>
+    <main>
+      <section class="work">
+        <div class="container">
+          <h2 class="major" id="work">#Projetos</h2>
+        </div>
+
+        <div class="container gridCont quad">
+          <div class="grid" data-rellax-speed="1.7">
+            <img class="proj" name="0" src="img/ba.svg" alt="">
+          </div>
+
+          <div class="grid" data-rellax-speed="1.7">
+            <img class="proj" name="1" src="exorcisamus/svg/alpaca.svg" alt="">
+          </div>
+
+          <div class="grid" data-rellax-speed="1.7">
+            <img class="proj" name="2" src="img/mvt_white.svg" alt="">
+          </div>
+
+          <div class="grid" data-rellax-speed="1.7">
+            <img class="proj" name="3" src="img/gf_white.svg" alt="">
+          </div>
+        </div>
+
+        <div class="container gridCont odd2" id="projetos_sites">
+          <div class="grid txt">
+            <p class="left" id="projeto_p">Também iniciei o curso de Sistemas para Internet na FATEC Jahu.</p>
+            <p class="left">
+              <a href="" id="link_projeto">
+                Visite o site
+              </a>
+            </p>
+            
+              
+          </div>
+  
+          <div class="grid" data-rellax-speed="1.7">
+            <img id="imagem_projeto" src="img/mvt.png" alt="">
+            <p>
+              <code id="hashtag_projeto">
+                #fatec #jau #naobebaaguadocanotorto
+              </code>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main> 
 
     <footer>
       <div class="container">
@@ -104,10 +119,12 @@
       </div>
     </footer>
 
+    <!-- vendor js -->
+    <script src="rellax.min.js"></script>
 
     <!-- main js -->
     <script src="main.js"></script>
-    <script src="prompt.js"></script>
+    <script src="projetos.js"></script>
 
 
   </body>

@@ -3,8 +3,6 @@ name = 'Maria Eugênia',
 speed = 200,
 i, t = 0;
 
-
-
 function typeWriter() {
   let txt = name;
   if (t < txt.length) {
@@ -86,24 +84,24 @@ const next = (arr,elem) => {
 // Example
 // ——————————————————————————————————————————————————
 
-//elementos a mudar
-const atividade = document.getElementById('atividade'),
-work = document.getElementById('work'),
-about = document.getElementById('about'),
-contact = document.getElementById('contact');
+// //elementos a mudar
+// const atividade = document.getElementById('atividade'),
+// work = document.getElementById('work'),
+// about = document.getElementById('about'),
+// contact = document.getElementById('contact');
 
-const atividade_ = new TextScramble(atividade),
-work_ = new TextScramble(work),
-about_ = new TextScramble(about),
-contact_ = new TextScramble(contact),
-elEvent = [atividade_, work_, about_, contact_];
+// const atividade_ = new TextScramble(atividade),
+// work_ = new TextScramble(work),
+// about_ = new TextScramble(about),
+// contact_ = new TextScramble(contact),
+// elEvent = [atividade_, work_, about_, contact_];
 
-const sections = [
-                    ['criar', 'desenhar', 'observar', 'desenvolver', 'estudar'],
-                    ['#Projetos', '#Projetos', '#Projetos', '#Projetos', '#Projetos'],
-                    ['#Sobre', '#Sobre', '#Sobre', '#Sobre', '#Sobre'],
-                    ['#Contato', '#Contato', '#Contato', '#Contato', '#Contato']
-                  ];
+// const sections = [
+//                     ['criar', 'desenhar', 'observar', 'desenvolver', 'estudar'],
+//                     ['#Projetos', '#Projetos', '#Projetos', '#Projetos', '#Projetos'],
+//                     ['#Sobre', '#Sobre', '#Sobre', '#Sobre', '#Sobre'],
+//                     ['#Contato', '#Contato', '#Contato', '#Contato', '#Contato']
+//                   ];
 
 //showcase
 let showcase = document.getElementsByClassName('showcase'),
@@ -130,60 +128,7 @@ function changeSrc(el) {
 }
 
 
-//PROMPT code
-function ranCode(el){
-  let beforeRun = document.getElementsByClassName('beforeRun'), a = 0,
-  ell = el.parentNode.parentNode, ele = el.nextElementSibling;
-  el.classList.add('ranCode');
-  ele.classList.add('ranCode');
 
-  function loaded(el){
-    el.classList.add('clipPath');
-
-    function clip(el){
-      for (let i = 0; i < beforeRun.length; i++) {
-        beforeRun[i].classList.remove('beforeRun');
-      }
-      el.addEventListener('transitionend', function(){el.remove();},false);
-    }
-
-    el.addEventListener('transitionend',function (){clip(ell)},false);
-  }
-
-  ele.addEventListener('transitionend',function (){loaded(ell)},false);
-  for (let t = 0; t < sections.length; t++) {
-    ele.addEventListener('transitionend', function(){
-      setTimeout(function(){
-        next(sections[t], elEvent[t]);
-      }, 5000)
-    }, false);
-  }
-  ele.addEventListener('transitionend', function(){setTimeout(typeWriter, 2000);}, false);
-  ele.addEventListener('transitionend', function(){
-    for (let t = 0; t < showcase.length; t++) {
-      showcase[t].addEventListener('mouseover',function() {changeSrc(this);}, false );
-      showcase[t].addEventListener('touchstart',function() {changeSrc(this);}, false );
-      showcase[t].name = t;
-    }
-  }, false);
-  ele.addEventListener('transitionend', function(){
-    command.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13) {
-       event.preventDefault();
-       revealAtCommand();
-      }
-    });
-  }, false);
-
-}
-
-let runCode = document.getElementById("runCode");
-window.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   runCode.click();
-  }
-});
 
 
 //vendor js
@@ -228,50 +173,50 @@ window.addEventListener("keyup", function(event) {
 
 //vendor - rellax js
 
-if (widthScreen > 1024) {
-  let rellax = new Rellax('.rellax');
-}
-//Sobre
-let personal = [
-                  'Nome: Maria Eugênia Deungaro Borgato',
-                  'Data de Nascimento: 12/08/1994',
-                  'Hobbies: Desenhar, Jogar, Estudar e Desenvolver'
-                ];
+// if (widthScreen > 1024) {
+//   let rellax = new Rellax('.rellax');
+// }
+// //Sobre
+// let personal = [
+//                   'Nome: Maria Eugênia Deungaro Borgato',
+//                   'Data de Nascimento: 12/08/1994',
+//                   'Hobbies: Desenhar, Jogar, Estudar e Desenvolver'
+//                 ];
 
-let educacao = [
-                  'Faculdade de Tecnologia de Jahu - FATEC JAHU • Sistemas para Internet • Tecnologia • 2020-Presente',
-                  'Universidade de São Paulo - ESALQ/USP • Engenharia Agronômica • Bacharelado • 2012-2019',
-                  'Ohio State University - OSU Columbus • Estudos agrários • Graduação Sanduíche • 2015-2016',
-                  'Idiomas: Inglês Fluente • Espanhol Intermediário'
-                ];
-let conhecimentos = [ 'HTML5',  'CSS3',  'JS',  'Git/GitHub', 'PWA' ];
+// let educacao = [
+//                   'Faculdade de Tecnologia de Jahu - FATEC JAHU • Sistemas para Internet • Tecnologia • 2020-Presente',
+//                   'Universidade de São Paulo - ESALQ/USP • Engenharia Agronômica • Bacharelado • 2012-2019',
+//                   'Ohio State University - OSU Columbus • Estudos agrários • Graduação Sanduíche • 2015-2016',
+//                   'Idiomas: Inglês Fluente • Espanhol Intermediário'
+//                 ];
+// let conhecimentos = [ 'HTML5',  'CSS3',  'JS',  'Git/GitHub', 'PWA' ];
 
-class Mage{
-  static reveal(about){
-    return about.join('<br><br>');
-  }
-}
+// class Mage{
+//   static reveal(about){
+//     return about.join('<br><br>');
+//   }
+// }
 
 
-function revealAtCommand() {
-  let command = document.getElementById('command'),
-  output = document.getElementById('output'),
-  value = command.value;
+// function revealAtCommand() {
+//   let command = document.getElementById('command'),
+//   output = document.getElementById('output'),
+//   value = command.value;
 
-  if (value == 'dadosPessoais') {
-    output.innerHTML = Mage.reveal(personal);
-  }else if (value == 'educacao') {
-    output.innerHTML = Mage.reveal(educacao);
-  }else if (value == 'conhecimentos') {
-    output.innerHTML = Mage.reveal(conhecimentos);
-  }else if (value == '') {
-    output.innerHTML = "<span class='papaya'>"+'Uncaught TypeError: Cannot read property \'join\' of undefined at '+'Function.reveal</span>';
-  }else {
-    if (value.includes(' ')) {
-      output.innerHTML = "<span class='papaya'>Uncaught SyntaxError: missing ) after argument list</span>";
-    }else {
-      output.innerHTML = "<span class='papaya'>Uncaught ReferenceError: "+value+" is not defined</span>";
-    }
-  }
+//   if (value == 'dadosPessoais') {
+//     output.innerHTML = Mage.reveal(personal);
+//   }else if (value == 'educacao') {
+//     output.innerHTML = Mage.reveal(educacao);
+//   }else if (value == 'conhecimentos') {
+//     output.innerHTML = Mage.reveal(conhecimentos);
+//   }else if (value == '') {
+//     output.innerHTML = "<span class='papaya'>"+'Uncaught TypeError: Cannot read property \'join\' of undefined at '+'Function.reveal</span>';
+//   }else {
+//     if (value.includes(' ')) {
+//       output.innerHTML = "<span class='papaya'>Uncaught SyntaxError: missing ) after argument list</span>";
+//     }else {
+//       output.innerHTML = "<span class='papaya'>Uncaught ReferenceError: "+value+" is not defined</span>";
+//     }
+//   }
 
-}
+// }

@@ -13,7 +13,9 @@
   --blueberry: #504176;
   --banana: #ecc743;
   --lilac: #7e65bc;
+  --purply: #402b76;
   --grafitte: #45454d;
+  --darkgrey: #161616;
 
 
   /*não usadas ou trocadas*/
@@ -28,6 +30,16 @@
   --peach: #ffddcc;
   --navy: #407088;
   --oldnavy: #132743;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: var(--lilac);
+  color: white;
+}
+
+::selection {
+  background: var(--lilac);
+  color: white;
 }
 
 .cream{
@@ -59,7 +71,7 @@
   color: var(--magenta);
 }
 
-.sky, a{
+.sky{
   color: var(--sky);
 }
 
@@ -70,7 +82,7 @@
 
 /*vendor*/
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
-  background: var(--cream)!important;
+  background: var(--lilac)!important;
 }
 
 /*disable user selection*/
@@ -121,11 +133,12 @@ html, body{
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Lato', sans-serif;
   color: var(--cream);
   /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/coding.jpg) no-repeat 0 0/cover var(--darkblue); */
-  background: var(--darkblue);
+  background: var(--darkgrey);
 }
 
 aside{
@@ -143,6 +156,15 @@ a{
   text-decoration: none;
 }
 
+small a{
+  color: inherit;
+}
+
+main{
+  padding-top: 5rem;
+  
+}
+
 main, header, input, *::placeholder, textarea{
   color: #fff;
 }
@@ -158,10 +180,24 @@ header{
 
 footer{
   padding: 1rem 0;
+  color: var(--lilac);
+  text-align: right;
+}
+
+footer small, .logo img{
+  background-color: var(--darkgrey);
+}
+
+footer a:hover{
+  text-decoration: underline;
 }
 
 h1{
   font-size: 3rem;
+}
+
+p, q{
+  opacity: .9;
 }
 
 .container{
@@ -184,21 +220,28 @@ nav, .nav{
   transition: .5s;
 }
 
+
+
 .nav{
   width: 100vw;
-  background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0));
+  /* background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0)); */
 }
 
 nav{
   right: 0;
   height: 100vh;
   width: 0;
-  background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8));
+  /* background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)); */
+  background-color: var(--purply);
   z-index: 2;
 }
 
 nav .container, nav .menuPanel{
   height: 80%;
+}
+
+.menuPanel a{
+  color: inherit;
 }
 
 nav ul{
@@ -228,6 +271,10 @@ nav li:hover code{
 .logo{
   float: left;
   margin-top: 2rem;
+  color: orange;
+  margin-top: 1rem;
+  width: 13%;
+  margin-left: -2rem;
 }
 
 .menu {
@@ -255,22 +302,93 @@ img.scroll {
     width: 2rem;
 }
 
-h2.major {
-    font-size: 8rem;
-    font-weight: bold;
+.logo img{
+  width: 100%;
 }
 
-h2.major, *::placeholder{
+h2.major {
+  font-size: 15vw;
+  font-weight: bold;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 70vh;
+  margin: 0;
+  z-index: -1;
+  opacity: .1;
+  width: 100%;
+  text-align: center;
+}
+
+h2.title{
+  font-size: 5rem;
+  opacity: .75;
+}
+
+*::placeholder{
   opacity: .5;
+}
+
+q{
+  font-size: 1.4rem;
+}
+
+.grid a i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--lilac);
+  width: 100%;
+}
+
+.grid a i:hover{
+  color: var(--banana);
 }
 
 .container.gridCont {
     padding: 2rem 0;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 50% 50%;
-    grid-template-columns: 50% 50%;
+    
     place-items: center;
+}
+
+.container.gridCont.even{
+  -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+}
+.container.gridCont.odd1{
+  -ms-grid-columns: 35% 65%;
+    grid-template-columns:  35% 65%;
+}
+.container.gridCont.odd2{
+  -ms-grid-columns: 65% 35%;
+    grid-template-columns: 65% 35%;
+}
+
+.container.gridCont.triple{
+  -ms-grid-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.container.gridCont.triple1{
+  -ms-grid-columns: 25% 50% 25%;
+    grid-template-columns: 25% 50% 25%;
+}
+.container.gridCont.triple2{
+  -ms-grid-columns: 10% 80% 10%;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.container.gridCont.quad{
+  -ms-grid-columns: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+
+.quad .grid  img, .triple1 .grid img{
+  width: 85%;
+  margin: 0 auto;
 }
 
 .grid img {
@@ -279,7 +397,17 @@ h2.major, *::placeholder{
 
 .grid p {
     text-align: center;
+    font-size: 1.3rem;
+    margin: .6em 0;
 }
+
+.grid p.right{
+  text-align: right;
+}
+.grid p.left{
+  text-align: left;
+}
+
 
 .grid {
     display: -ms-inline-grid;
@@ -309,34 +437,30 @@ h2.major, *::placeholder{
   width: 100%;
 }
 
-.work code{
-  font-size: 1.5rem;
+.work{
+  padding-top: 13%;
 }
 
-.sobre code{
+.sobre code, .work code{
   font-size: 2rem;
 }
 
-.ide{
-  background: linear-gradient(rgba(5, 1, 24, .1), rgba(5, 1, 24, .5), rgba(5, 1, 24, 0.9) , rgba(5, 1, 24, .5), rgba(5, 1, 24, .1));
-  padding: 2rem 0;
-}
-
-input#command {
-  font-size: inherit;
-  padding: 0;
-  width: 12rem;
+form, .grid form p{
+  text-align: center;
+  font-size: 2rem;
 }
 
 input, *::placeholder, form span {
     font-family: monospace;
     font-size: inherit;
 
-}
+} 
 
 input, textarea{
   background: transparent;
   padding: .5rem;
+  width: 60%;
+  opacity: .6;
 }
 
 input, *::placeholder, textarea{
@@ -344,20 +468,53 @@ input, *::placeholder, textarea{
   text-align: center;
 }
 
-input[type=submit]{
-  border: none;
+input[type=email], input[type=text], textarea{
+ border: none;
 }
 
-input[type=email], input[type=text], textarea{
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-bottom: 1px white solid;
+input[type=submit]{
+  background-color: var(--banana);
+  color: var(--darkgrey);
+  border: none;
+  opacity: 1;
+  padding: 1rem .5rem;
+}
+
+input[type=submit]:hover, .work .quad .grid img:hover{
+  transform: scale(1.2);
+}
+
+input[type=submit], .work .quad .grid img{
+  transition: .5s;
+  cursor: pointer;
 }
 
 textarea{
   resize: none;
+  font-size: 2rem;
 }
+
+a#link_projeto {
+  color: var(--lilac);
+}
+a#link_projeto:hover {
+  color: var(--banana);
+}
+
+#projetos_sites{
+  opacity: 0;
+  transition: .5s;
+}
+
+#projetos_sites.seen{
+  opacity: 1!important;
+  transition: .5s;
+}
+
+.work .grid.txt{
+  width: 100%;
+}
+
 /* ------------------------- */
 /*PROMPT inicial*/
 #runCode{
@@ -391,7 +548,7 @@ textarea{
   width: 100vw;
   top: 0;
   left: 0;
-  background-color: var(--darkblue);
+  background-color: var(--darkgrey);
   position: absolute;
   /* color: var(--cream); */
   transition: 1s all;
@@ -401,6 +558,8 @@ textarea{
   flex-direction: column;
   justify-content: center;
 }
+
+
 
 
 .beforeRun nav, .beforeRun .nav, .beforeRun main, .beforeRun footer, .beforeRun header {
@@ -423,8 +582,9 @@ opacity: 0;
   background: var(--blueberry);
   transition: width 2.5s ease-in-out;
   width: 0%;
-  color: var(--darkblue);
+  color: var(--darkgrey);
   /* opacity: 0; */
+  user-select: none;
 }
 
 #ranCode.ranCode{

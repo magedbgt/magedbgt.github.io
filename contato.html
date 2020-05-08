@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="">
   <head>
-    <title>mage.home</title>
+    <title>mage.contato</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="./css/style.css" rel="stylesheet" type="text/css">
@@ -13,26 +13,7 @@
 
   </head>
 
-  <body class="beforeRun">
-
-
-    <div id="prompt">
-      <div class="container" id="code">
-        <code class="comment">
-          <span>
-            //Bem-vindo!<br>
-            //Para continuar, toque / clique em 'run' ou aperte 'enter'<br>
-          </span>
-        </code>
-
-        <code id="code2">
-          <span class="magenta">let</span> me = <span class="papaya">life</span>.<span class="sky">getPersonByName</span>(<span class="grass">'Magê Deungaro'</span>);<br>
-          <span class="papaya">window</span>.<span class="sky">addEventListener</span>('click', <span class="magenta">function</span>(){<span class="sky">revealAbout</span>(me);}, <span class="banana">false</span>);
-      </code>
-      <p id="runCode" onclick="ranCode(this);"><i class="fas fa-play"></i> RUN</p>
-      <p id="ranCode"><code>Loading...</code></p>
-      </div>
-    </div>
+  <body class="">
 
 
     <div class="nav" id="navBar">
@@ -80,20 +61,45 @@
       </div>
     </nav>
 
-    <header>
-      <div class="container">
-        <h1>
-          <code>
-            Olá, sou a
-            <span class="lilac" id="change">
-              <!-- Maria Eugênia -->
-            </span>
-            e adoro
-            <em id="atividade">desenvolver</em>
-          </code>
-        </h1>
-        <!-- <img src="img/scroll.svg" alt="scroll" class="scroll"> -->
-    </header>
+    <main>
+      <section class="contact">
+        <div class="container">
+          <h2 class="major" id="contact">#Contato</h2>
+        </div>
+
+        <div class="container gridCont triple2">
+        
+          <div class="grid" data-rellax-speed="1.7">
+            <a href="https://github.com/magedbgt"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/mage_bgt/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/magedeungaro/"><i class="fab fa-linkedin"></i></a>
+            <a href="http://fb.me/magenificat"><i class="fab fa-facebook"></i></a>
+          </div>
+  
+          <div class="grid" data-rellax-speed="1.7">
+            <form action="https://mailthis.to/maria.borgato@usp.com" method="POST" encType="multipart/form-data">
+              <code>
+                <p>Eu sou</p>
+                <input type="text" name="name" placeholder="//seu nome"><br>
+                <p>Meu email é</p>
+                <input type="email" name="_replyto" placeholder="//seu email"><br>
+                <p>e gostaria de mandar a seguinte mensagem:</p>
+                <textarea name="message" placeholder="//sua mensagem" rows="4"></textarea>
+                <input type="hidden" name="_subject" value="Mensagem enviada">
+                <input type="hidden" name="_after" value="alert('Formulário Enviado!');">
+                <input type="hidden" name="_honeypot" value="">
+                <input type="hidden" name="_confirmation" value=""><br>
+                <input type="submit" value="Enviar">
+              </code>
+            </form>
+          </div>
+  
+          <div class="grid" data-rellax-speed="1.7">
+          </div>
+  
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="container">
@@ -104,10 +110,9 @@
       </div>
     </footer>
 
-
     <!-- main js -->
     <script src="main.js"></script>
-    <script src="prompt.js"></script>
+    <script src="contato.js"></script>
 
 
   </body>

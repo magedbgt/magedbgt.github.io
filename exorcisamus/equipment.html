@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html id="html-scroll">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Tudo para o seu arcebispo exorcista!">
+	  <meta name="keywords" content="adoramus archbishop, arcebispo adoramus, ragnarok, ragnarok online, brazilian ragnarok online, warpportal, warpportal brazil, level up games, magnus exorcismus, adoramus, alpaca, sumo-sacerdote, noviço, luz divina, judex, exorcismo, exorcisamus blog">
+  	<meta name="author" content="Mage Deungaro">
+    <title>Exorcisamus Blog</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Coustard:900|Josefin+Slab|Sacramento" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div id="floating" onclick="openNav()">
+      <span class="fa-stack fa-2x">
+        <i class="hidden fas fa-circle fa-stack-2x"></i>
+        <i class="menu fas fa-bars fa-stack-1x"></i>
+      </span>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="close-menu">&times;</a>
+      <a class="navA" href="javascript:void(0)" onclick="openSearch()">Pesquisar&emsp;<i class="fas fa-search"></i></a>
+      <a class="navA" href="index.html">Home</a>
+      <a class="navA" href="sobremage.html">Sobre</a>
+      <a class="navA" href="builds.html">Builds</a>
+      <a class="navA" href="quiz.html">Quiz</a>
+      <a class="navA" href="calculadora.html">Calculadora</a>
+    </div>
+
+    <div id="myOverlay" class="overlay">
+      <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+      <div class="overlay-content">
+        <form action="/search" method="get">
+          <input type="text" placeholder="Pesquisar" name="q" required>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- <div class="abImg4">
+      <h1>Calculadora de Dano</h1>
+    </div> -->
+
+
+    <header>
+      <div class="container">
+      <div id="alpacasvg"><img src="./svg/alpaca.svg" alt="Alpaca"></div>
+      <h1>Exorcisamus !! Blog</h1>
+      </div>
+    </header>
+
+    <section id="calculadora" class="calcBonus">
+      <div class="container">
+        <!--<a href="https://www.exorcisamus.com/2019/05/uma-nova-calculadora.html"><input type="button" value="Instruções" /></a>-->
+        <h2>Calculadora de Bônus</h2>
+        <div class="flexRow">
+          <div class="flexColumn calcMargin">
+            <select id="slots">
+              <option value="alt0">SLOT 1</option>
+              <option value="alt1">SLOT 2</option>
+              <option value="alt2">SLOT 3</option>
+            </select>
+          </div>
+          <div class="flexColumn calcMargin">
+            <input onclick="" type="button" id="saveBtn" value ="Salvar">
+          </div>
+          <div class="flexColumn calcMargin">
+            <input onclick="" type="button" id="loadBtn" value ="Carregar">
+          </div>
+        </div>
+        <div class="flexRow">
+            <div class="flexColumn calcMargin">
+
+                <span id="charAtt" class="equipamento">
+                <h3>Personagem</h3>
+                    <p>Level de Classe</p>
+                    <select class="jobLevel"></select>
+                    
+                    <p>Atributos Base</p>
+                    <span class="flexRow">
+                        <span class="flexColumn">INT
+                            <br>
+                            <input type="number" class="attributes" class="baseAtt" placeholder="0">
+                        </span>
+                        <span class="flexColumn">DEX
+                            <br>
+                            <input type="number" class="attributes" class="baseAtt" placeholder="0">
+                        </span>
+                        <span class="flexColumn">LUK
+                            <br>
+                            <input type="number" class="attributes" class="baseAtt" placeholder="0">
+                        </span>
+                    </span>
+                </span>
+
+                
+                <span id="consuVIP" class="equipamento">
+                    <h3>Consumíveis / VIP / Pet</h3>
+                    <span class="flexRow">
+                        <span class="flexColumn">INT
+                            <br>
+                            <input type="number" class="attributes" class="bonusAtt" placeholder="0">
+                        </span>
+                        <span class="flexColumn">DEX
+                            <br>
+                            <input type="number" class="attributes" class="bonusAtt" placeholder="0">
+                        </span>
+                        <span class="flexColumn">LUK
+                            <br>
+                            <input type="number" class="attributes" class="bonusAtt" placeholder="0">
+                        </span>
+                    </span>
+                    
+                
+                    <p>Pet</p>
+                    <select class="pets">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+                
+
+                <span id="sombrioEkip" class="equipamento">
+                    <h4>Visuais Sombrios</h4>
+                    <p>Arma</p>
+                    <span>
+                        <select class=" refine">Refino</select>
+                        <select class=" ekip">
+                            <option value="none">--</option>
+                            <option value="sombrio1">Luvas Sombrias Festivas</option>
+                        </select>
+                    </span>
+                    <p>Armadura</p>
+                    <span>
+                        <select class=" refine">Refino</select>
+                        <select class=" ekip">
+                            <option value="none">--</option>
+                            <option value="sombrio2">Malha Sombria Festiva</option>
+                        </select>
+                    </span>
+                    <p>Acessório</p>
+                    <span>
+                        <select class=" refine">Refino</select>
+                        <select class=" ekip">
+                            <option value="none">--</option>
+                            <option value="sombrio3">Brincos Sombrios Festivos</option>
+                        </select>
+                    </span>
+
+                </span>
+
+            </div>
+            <div class="flexColumn calcMargin">
+                <span id="topoEkip" class="equipamento">
+                    <h4>Topo</h4>
+                    <select class="refine">Refino</select>
+                    <select class="mainEkip ekip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Cartas</p>
+                    <select class="cards">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+            
+                <span id="baixoEkip" class="equipamento">
+                    <h4>Baixo</h4>
+                    <select class="mainEkip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+
+                <span id="armaEkip" class="equipamento">
+                    <h4>Arma</h4>
+                    <select class="refine">Refino</select>
+                    <select class="mainEkip ekip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Cartas</p>
+                    <select class="cards break">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="cards break">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+            
+            
+                <span id="capaEkip" class="equipamento">
+                    <h4>Capa</h4>
+                    <select class="refine">Refino</select>
+                    <select class="mainEkip ekip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Cartas</p>
+                    <select class="cards">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+            
+                <span id="acc1Ekip" class="equipamento">
+                    <h4>Acessório 1</h4>
+                    <select class="mainEkip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Cartas</p>
+                    <select class="cards">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+            </div>
+
+            <div class="flexColumn calcMargin">
+                
+                <span id="meioEkip" class="equipamento">
+                    <h4>Meio</h4>
+                    <select class="mainEkip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Cartas</p>
+                    <select class="cards">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+
+                <span id="armaduraEkip" class="equipamento">
+                    <h4>Armadura</h4>
+                    <select class="refine">Refino</select>
+                    <select class="mainEkip ekip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Cartas</p>
+                    <select class="cards">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+                <span id="escudoEkip" class="equipamento">
+                    <h4>Escudo</h4>
+                    <select class="refine">Refino</select>
+                    <select class="mainEkip ekip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Cartas</p>
+                    <select class="cards">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+
+                <span id="sapatoEkip" class="equipamento">
+                    <h4>Sapatos</h4>
+                    <select class="refine">Refino</select>
+                    <select class="mainEkip ekip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Cartas</p>
+                    <select class="cards">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+
+                <span id="acc2Ekip" class="equipamento">
+                    <h4>Acessório 2</h4>
+                    <select class="mainEkip">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Cartas</p>
+                    <select class="cards">
+                        <option value="none">--</option>
+                    </select>
+
+                    <p>Encantamentos</p>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                    <select class="enchants">
+                        <option value="none">--</option>
+                    </select>
+                </span>
+        
+            </div>
+        </div>
+        <div class="flexRow centerTxt_">
+        </div>
+      </div>
+    </section>
+
+    <div onclick="topFunction()" id="topoBtn" title="Vá para o topo">
+	    <span class="fa-stack fa-2x">
+        <i class="hidden fas fa-heart fa-stack-2x"></i>
+    	  <i class="menu fas fa-arrow-up fa-stack-1x"></i>
+	    </span>
+    </div>
+
+    <footer>
+      <small>&copy; Magê Deungaro 2019<small>
+      <div class="social-links">
+        <a href="https://www.facebook.com/groups/1672243703028215/"><i class="fab fa-facebook fa-2x"></i></a><a href="http://www.youtube.com/c/Exorcisamus"><i class="fab fa-youtube fa-2x"></i></a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="main2.js"></script>
+    <script src="enchant.js"></script>
+    <script src="equipment.js"></script>
+
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>

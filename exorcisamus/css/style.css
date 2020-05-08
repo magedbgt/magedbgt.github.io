@@ -834,6 +834,38 @@ input[type=button]:hover{
 
 .calcMargin{
   margin: 0 .5rem;
+  width: 25%;
+}
+
+.equipamento {
+  background: #f3f3f3;
+  padding: .5rem;
+  border-radius: 5%;
+  margin: 0 0 .5rem;
+}
+
+.equipamento h4{
+  text-align: center;
+}
+
+#calculadora.calcBonus .flexColumn{
+  justify-content: end;
+}
+
+#calculadora.calcBonus select.ekip {
+  width: 70%;
+}
+
+#calculadora.calcBonus select.refine{
+  width: 28%;
+}
+
+#calculadora.calcBonus select.enchants{
+  width: 32%;
+}
+
+#calculadora.calcBonus select.break{
+  width: 49%;
 }
 
   .centerTxt{
