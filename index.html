@@ -5,17 +5,15 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="./css/style.css" rel="stylesheet" type="text/css">
-    <link href="./fontawesome/css/all.css" rel="stylesheet" type="text/css">
-
+    
     <!-- css vendors -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Major+Mono+Display&display=swap" rel="stylesheet">
     <link href="./css/vendor/hamburgers.css" rel="stylesheet" type="text/css">
+    <link href="./fontawesome/css/all.css" rel="stylesheet" type="text/css">
 
   </head>
 
   <body class="beforeRun">
-
-
     <div id="prompt">
       <div class="container" id="code">
         <code class="comment">
@@ -29,7 +27,10 @@
           <span class="magenta">let</span> me = <span class="papaya">life</span>.<span class="sky">getPersonByName</span>(<span class="grass">'Magê Deungaro'</span>);<br>
           <span class="papaya">window</span>.<span class="sky">addEventListener</span>('click', <span class="magenta">function</span>(){<span class="sky">revealAbout</span>(me);}, <span class="banana">false</span>);
       </code>
-      <p id="runCode" onclick="ranCode(this);"><i class="fas fa-play"></i> RUN</p>
+      <p id="runCode" onclick="ranCode(this);">
+        <i class="fas fa-play"></i>
+        RUN
+      </p>
       <p id="ranCode"><code>Loading...</code></p>
       </div>
     </div>
@@ -40,8 +41,8 @@
         <div class="logo">
           <img src="img/logo.svg" alt="Magê">
         </div>
-        <div class="menu">
 
+        <div class="menu">
           <button class="hamburger hamburger--emphatic" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
@@ -92,7 +93,6 @@
             <em id="atividade">desenvolver</em>
           </code>
         </h1>
-        <!-- <img src="img/scroll.svg" alt="scroll" class="scroll"> -->
     </header>
 
     <footer>
@@ -104,11 +104,9 @@
       </div>
     </footer>
 
-
     <!-- main js -->
     <script src="main.js"></script>
     <script src="prompt.js"></script>
-
 
   </body>
 </html>

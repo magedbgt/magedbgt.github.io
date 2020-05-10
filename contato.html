@@ -5,24 +5,21 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="./css/style.css" rel="stylesheet" type="text/css">
-    <link href="./fontawesome/css/all.css" rel="stylesheet" type="text/css">
 
     <!-- css vendors -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Major+Mono+Display&display=swap" rel="stylesheet">
     <link href="./css/vendor/hamburgers.css" rel="stylesheet" type="text/css">
-
+    <link href="./fontawesome/css/all.css" rel="stylesheet" type="text/css">
   </head>
 
   <body class="">
-
-
     <div class="nav" id="navBar">
       <div class="container">
         <div class="logo">
           <img src="img/logo.svg" alt="Magê">
         </div>
+        
         <div class="menu">
-
           <button class="hamburger hamburger--emphatic" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
@@ -61,30 +58,29 @@
       </div>
     </nav>
 
-    <main>
-      <section class="contact">
+    <main class="contact">
+      <section>
         <div class="container">
           <h2 class="major" id="contact">#Contato</h2>
         </div>
 
         <div class="container gridCont triple2">
-        
-          <div class="grid" data-rellax-speed="1.7">
+          <div class="grid" >
             <a href="https://github.com/magedbgt"><i class="fab fa-github"></i></a>
             <a href="https://www.instagram.com/mage_bgt/"><i class="fab fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/magedeungaro/"><i class="fab fa-linkedin"></i></a>
             <a href="http://fb.me/magenificat"><i class="fab fa-facebook"></i></a>
           </div>
   
-          <div class="grid" data-rellax-speed="1.7">
+          <div class="grid" >
             <form action="https://mailthis.to/maria.borgato@usp.com" method="POST" encType="multipart/form-data">
               <code>
                 <p>Eu sou</p>
-                <input type="text" name="name" placeholder="//seu nome"><br>
+                <input type="text" name="name" placeholder="//seu nome" required><br>
                 <p>Meu email é</p>
-                <input type="email" name="_replyto" placeholder="//seu email"><br>
+                <input type="email" name="_replyto" placeholder="//seu email" required><br>
                 <p>e gostaria de mandar a seguinte mensagem:</p>
-                <textarea name="message" placeholder="//sua mensagem" rows="4"></textarea>
+                <textarea name="message" placeholder="//sua mensagem" rows="4" required></textarea>
                 <input type="hidden" name="_subject" value="Mensagem enviada">
                 <input type="hidden" name="_after" value="alert('Formulário Enviado!');">
                 <input type="hidden" name="_honeypot" value="">
@@ -94,9 +90,7 @@
             </form>
           </div>
   
-          <div class="grid" data-rellax-speed="1.7">
-          </div>
-  
+          <div class="grid"></div>
         </div>
       </section>
     </main>
@@ -113,7 +107,6 @@
     <!-- main js -->
     <script src="main.js"></script>
     <script src="contato.js"></script>
-
 
   </body>
 </html>

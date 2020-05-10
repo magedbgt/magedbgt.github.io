@@ -4,14 +4,8 @@ const sections = [
                   ];
 //elementos a mudar
 const work = document.getElementById('work');
-
 const work_ = new TextScramble(work);
-
 elEvent = [work_];
-
-setTimeout(function(){
-  next(sections[0], elEvent[0]);
-}, 1000)
 
 //mostra projetos
 const parag = "</p><p class='left'>";
@@ -57,12 +51,12 @@ function showProjeto(el){
   linkP = document.getElementById('link_projeto'),
   descP = document.getElementById('projeto_p'),
   hashP = document.getElementById('hashtag_projeto');
-  let index = el.name;
   let body_proj = document.getElementById('body_proj');
   let section_work = document.getElementById('section_work');
+  let index = el.name;
+
 
   panel.classList.remove('seen');
-  // panel.style.opacity = '0';
   setTimeout(function(){
     imagemP.src = src_projetos[index];
     imagemP.alt = nomes_projetos[index];
@@ -76,6 +70,12 @@ function showProjeto(el){
 }
 
 window.addEventListener('load', function(){
+  //scramble 
+  setTimeout(function(){
+    next(sections[0], elEvent[0]);
+  }, 1000)
+
+  //projeto
   const projLogos = document.getElementsByClassName('proj');
 
   for(let i = 0; i<projLogos.length; i++){

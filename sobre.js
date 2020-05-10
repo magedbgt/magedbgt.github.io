@@ -1,33 +1,10 @@
 const sections = [
-    ['#Sobre'],
+    ['#Sobre']
   ];
 //elementos a mudar
 const about = document.getElementById('about');
-
 const about_ = new TextScramble(about);
-
 const elEvent = [about_];
-
-setTimeout(function(){
-  next(sections[0], elEvent[0]);
-}, 1000)
-
-function showIdade(){
-  let birth = 1994,
-  now = new Date(),
-  idade = now.getFullYear() - birth;
-
-  if(now.getDate != 12 && now.getMonth != 7){
-    idade--
-  }
-
-  for(let i=0; i<=idade; i++){
-    let spanIdade = document.getElementById('idade');
-    spanIdade.innerHTML = i;
-    // console.log(i);
-  }
-}
-
 
 function countValue(id, start, end, duration) {
   let range = end - start;
@@ -52,4 +29,9 @@ window.addEventListener('load', function(){
     if(now.getDate != 12 && now.getMonth != 7) idade--;
     countValue("idade", 0, idade, 1000);
   }, 1000);
+
+  setTimeout(function(){
+    next(sections[0], elEvent[0]);
+  }, 1000)
 }, false);
+
