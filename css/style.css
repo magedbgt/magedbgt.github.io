@@ -689,6 +689,10 @@ code.comment{
     font-size: 1.1rem;
     line-height: 2rem;
   }
+
+  div.container {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 450px) {
   body > main.contact{
