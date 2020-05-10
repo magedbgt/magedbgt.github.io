@@ -664,7 +664,7 @@ code.comment{
   }
 }
 
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 394px) {
   footer div small {
     font-size: .8rem;
   }
