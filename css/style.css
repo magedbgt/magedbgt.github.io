@@ -688,6 +688,14 @@ code.comment{
   div.container {
     width: 90%;
   }
+
+  .container div.menu{
+    margin-right: -5vw;
+  }
+
+  .container div.logo {
+    margin-left: -.6rem;
+  }
 }
 @media screen and (max-width: 450px) {
   body > main.contact{
