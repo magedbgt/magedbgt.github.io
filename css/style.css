@@ -368,12 +368,12 @@ q{
     grid-template-columns: 50% 50%;
 }
 .container.gridCont.odd1{
-  -ms-grid-columns: 35% 65%;
-    grid-template-columns:  35% 65%;
+  -ms-grid-columns: 45% 55%;
+    grid-template-columns:  45% 55%;
 }
 .container.gridCont.odd2{
-  -ms-grid-columns: 65% 35%;
-    grid-template-columns: 65% 35%;
+  -ms-grid-columns: 55% 45%;
+    grid-template-columns: 55% 45%;
 }
 
 .container.gridCont.triple{
@@ -401,7 +401,7 @@ q{
 }
 
 .grid img {
-    width: 40rem;
+    width: 35rem;
 }
 
 .grid p {
