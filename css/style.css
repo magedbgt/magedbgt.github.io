@@ -400,6 +400,10 @@ q{
   margin: 0 auto;
 }
 
+.grid.txt{
+  width: 80%;
+}
+
 .grid img {
     width: 35rem;
 }
