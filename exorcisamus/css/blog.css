@@ -962,6 +962,7 @@ html {
     padding: .25rem;
     width: 100%;
     background: #fff;
+    border: 1px solid #909090;
   }
 
   #calculadora input[type=button]{
@@ -1267,7 +1268,7 @@ html {
 
     input:disabled, #calculadora input[type=number]{
       padding: 14px;
-      border: 1px solid #909090;
+      
     }
 
     #calculadora button{
